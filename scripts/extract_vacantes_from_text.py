@@ -399,13 +399,14 @@ class VacancyExtractor:
         
         return processed_vacancies
     
-    def generate_report(self, vacancies: List[Dict], output_dir: Path):
+    def generate_report(self, vacancies: List[Dict], output_dir: Path, dataset_result: Optional[Dict] = None):
         """
-        Genera un reporte de la extracción.
+        Genera un reporte de la extracción con comparación y sugerencias.
         
         Args:
             vacancies: Lista de vacantes procesadas
             output_dir: Directorio de salida
+            dataset_result: Resultado de la conversión a dataset (opcional)
         """
         report = {
             'timestamp': datetime.now().isoformat(),
@@ -414,32 +415,177 @@ class VacancyExtractor:
             'failed': self.stats['failed'],
             'fields_extracted_counts': self.stats['fields_extracted'],
             'fields_missing_counts': self.stats['fields_missing'],
-            'vacancies': [
-                {
-                    'filename': v['filename'],
-                    'cargo': v['fields'].get('cargo'),
-                    'empresa': v['fields'].get('empresa'),
-                    'fecha': v['fields'].get('fecha'),
-                    'modalidad': v['fields'].get('modalidad'),
-                    'has_descripcion': bool(v['fields'].get('descripcion')),
-                    'has_requerimientos': bool(v['fields'].get('requerimientos')),
-                }
-                for v in vacancies
-            ]
+            'vacancies': []
         }
+        
+        # Agregar información detallada de cada vacante
+        for v in vacancies:
+            vacancy_info = {
+                'filename': v['filename'],
+                'cargo': v['fields'].get('cargo'),
+                'empresa': v['fields'].get('empresa'),
+                'fecha': v['fields'].get('fecha'),
+                'modalidad': v['fields'].get('modalidad'),
+                'has_descripcion': bool(v['fields'].get('descripcion')),
+                'has_requerimientos': bool(v['fields'].get('requerimientos')),
+                'original_length': len(v['original_text']),
+                'descripcion_length': len(v['fields'].get('descripcion', '')),
+                'requerimientos_length': len(v['fields'].get('requerimientos', '')),
+            }
+            
+            # Calcular métricas de calidad
+            quality_score = 0
+            quality_notes = []
+            
+            if v['fields'].get('cargo'):
+                quality_score += 20
+            else:
+                quality_notes.append("Cargo no extraído o incompleto")
+            
+            if v['fields'].get('empresa'):
+                quality_score += 20
+            else:
+                quality_notes.append("Empresa no extraída")
+            
+            if v['fields'].get('descripcion') and len(v['fields'].get('descripcion', '')) > 50:
+                quality_score += 20
+            else:
+                quality_notes.append("Descripción ausente o muy corta")
+            
+            if v['fields'].get('requerimientos') and len(v['fields'].get('requerimientos', '')) > 20:
+                quality_score += 20
+            else:
+                quality_notes.append("Requerimientos ausentes o muy cortos")
+            
+            if v['fields'].get('modalidad'):
+                quality_score += 10
+            else:
+                quality_notes.append("Modalidad no detectada")
+            
+            if v['fields'].get('fecha'):
+                quality_score += 10
+            
+            vacancy_info['quality_score'] = quality_score
+            vacancy_info['quality_notes'] = quality_notes
+            
+            report['vacancies'].append(vacancy_info)
+        
+        # Agregar información del dataset si está disponible
+        if dataset_result:
+            report['dataset_conversion'] = dataset_result
+        
+        # Calcular estadísticas generales
+        avg_quality = sum(v['quality_score'] for v in report['vacancies']) / len(report['vacancies']) if report['vacancies'] else 0
+        report['average_quality_score'] = round(avg_quality, 2)
+        
+        # Generar sugerencias
+        suggestions = []
+        
+        if self.stats['fields_missing'].get('cargo', 0) > 0:
+            suggestions.append({
+                'field': 'cargo',
+                'issue': f"{self.stats['fields_missing']['cargo']} vacantes sin cargo extraído",
+                'suggestion': "Mejorar patrones de detección de cargo o estructurar mejor el texto original con etiquetas claras como 'Cargo:' o 'Posición:'"
+            })
+        
+        if self.stats['fields_missing'].get('empresa', 0) > 0:
+            suggestions.append({
+                'field': 'empresa',
+                'issue': f"{self.stats['fields_missing']['empresa']} vacantes sin empresa extraída",
+                'suggestion': "Incluir el nombre de la empresa al inicio del texto o usar formato 'Empresa:' explícitamente"
+            })
+        
+        if self.stats['fields_missing'].get('modalidad', 0) > 0:
+            suggestions.append({
+                'field': 'modalidad',
+                'issue': f"{self.stats['fields_missing']['modalidad']} vacantes sin modalidad",
+                'suggestion': "Especificar modalidad (remoto/híbrido/presencial) de forma explícita en el texto"
+            })
+        
+        # Sugerencias basadas en calidad promedio
+        if avg_quality < 60:
+            suggestions.append({
+                'field': 'general',
+                'issue': f"Calidad promedio de extracción baja ({avg_quality:.1f}/100)",
+                'suggestion': "Considere estructurar mejor las vacantes usando formato YAML o incluir etiquetas claras para cada campo"
+            })
+        elif avg_quality < 80:
+            suggestions.append({
+                'field': 'general',
+                'issue': f"Calidad promedio de extracción moderada ({avg_quality:.1f}/100)",
+                'suggestion': "Algunos campos no se están extrayendo correctamente. Revise el formato del texto original"
+            })
+        
+        report['suggestions'] = suggestions
         
         # Guardar reporte JSON
         report_path = output_dir / 'extraction_report.json'
         with open(report_path, 'w', encoding='utf-8') as f:
             json.dump(report, f, ensure_ascii=False, indent=2)
         
-        # Imprimir resumen
+        # Guardar reporte legible en texto
+        text_report_path = output_dir / 'extraction_report.txt'
+        with open(text_report_path, 'w', encoding='utf-8') as f:
+            f.write("="*70 + "\n")
+            f.write("REPORTE DE EXTRACCIÓN DE VACANTES\n")
+            f.write("="*70 + "\n\n")
+            f.write(f"Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            
+            f.write("RESUMEN\n")
+            f.write("-"*70 + "\n")
+            f.write(f"Total procesadas: {self.stats['processed']}\n")
+            f.write(f"Exitosas: {self.stats['successful']}\n")
+            f.write(f"Fallidas: {self.stats['failed']}\n")
+            f.write(f"Calidad promedio: {avg_quality:.1f}/100\n\n")
+            
+            f.write("CAMPOS EXTRAÍDOS\n")
+            f.write("-"*70 + "\n")
+            for field, count in sorted(self.stats['fields_extracted'].items()):
+                f.write(f"  ✓ {field}: {count}\n")
+            
+            if self.stats['fields_missing']:
+                f.write("\nCAMPOS NO EXTRAÍDOS\n")
+                f.write("-"*70 + "\n")
+                for field, count in sorted(self.stats['fields_missing'].items()):
+                    f.write(f"  ✗ {field}: {count}\n")
+            
+            f.write("\nDETALLE POR VACANTE\n")
+            f.write("-"*70 + "\n")
+            for i, v in enumerate(report['vacancies'], 1):
+                f.write(f"\n{i}. {v['filename']}\n")
+                f.write(f"   Calidad: {v['quality_score']}/100\n")
+                f.write(f"   Cargo: {v['cargo'] or 'NO EXTRAÍDO'}\n")
+                f.write(f"   Empresa: {v['empresa'] or 'NO EXTRAÍDO'}\n")
+                f.write(f"   Modalidad: {v['modalidad'] or 'NO EXTRAÍDO'}\n")
+                if v['quality_notes']:
+                    f.write(f"   Observaciones:\n")
+                    for note in v['quality_notes']:
+                        f.write(f"     - {note}\n")
+            
+            if suggestions:
+                f.write("\n\nSUGERENCIAS DE MEJORA\n")
+                f.write("="*70 + "\n")
+                for i, sug in enumerate(suggestions, 1):
+                    f.write(f"\n{i}. Campo: {sug['field']}\n")
+                    f.write(f"   Problema: {sug['issue']}\n")
+                    f.write(f"   Sugerencia: {sug['suggestion']}\n")
+            
+            if dataset_result and dataset_result.get('success'):
+                f.write("\n\nCONVERSIÓN A DATASET\n")
+                f.write("="*70 + "\n")
+                f.write(f"Archivos generados: {', '.join(dataset_result.get('files_generated', []))}\n")
+                f.write("\nUso del dataset:\n")
+                f.write("  python scripts/train_line_classifier.py data/line_dataset.jsonl\n")
+                f.write("  python scripts/train_tfidf_baseline.py data/line_dataset.jsonl\n")
+        
+        # Imprimir resumen en consola
         if self.verbose:
             print("\n" + "="*70)
             print("REPORTE DE EXTRACCIÓN")
             print("="*70)
             print(f"✅ Vacantes procesadas exitosamente: {self.stats['successful']}")
             print(f"❌ Vacantes fallidas: {self.stats['failed']}")
+            print(f"📊 Calidad promedio: {avg_quality:.1f}/100")
             print(f"\n📊 Campos extraídos:")
             for field, count in sorted(self.stats['fields_extracted'].items()):
                 print(f"   • {field}: {count}")
@@ -447,7 +593,16 @@ class VacancyExtractor:
                 print(f"\n⚠️  Campos no extraídos:")
                 for field, count in sorted(self.stats['fields_missing'].items()):
                     print(f"   • {field}: {count}")
-            print(f"\n💾 Reporte guardado en: {report_path}")
+            
+            if suggestions:
+                print(f"\n💡 SUGERENCIAS DE MEJORA:")
+                for i, sug in enumerate(suggestions, 1):
+                    print(f"   {i}. {sug['issue']}")
+                    print(f"      → {sug['suggestion']}")
+            
+            print(f"\n💾 Reportes guardados:")
+            print(f"   • JSON: {report_path}")
+            print(f"   • Texto: {text_report_path}")
             print("="*70 + "\n")
         
         return report
@@ -617,11 +772,8 @@ Ejemplos de uso:
     
     vacancies = extractor.process_text_file(input_path, output_path)
     
-    # Generar reporte si se solicita
-    if args.generate_report or not args.quiet:
-        extractor.generate_report(vacancies, output_path)
-    
     # Ejecutar conversión a dataset si se solicita
+    dataset_result = None
     if args.run_dataset_conversion:
         dataset_result = extractor.run_dataset_conversion(
             output_path,
@@ -630,7 +782,11 @@ Ejemplos de uso:
         )
         
         if not dataset_result.get('success', False):
-            return 1
+            print(f"⚠️  Advertencia: La conversión a dataset no se completó exitosamente")
+    
+    # Generar reporte si se solicita
+    if args.generate_report or not args.quiet:
+        extractor.generate_report(vacancies, output_path, dataset_result)
     
     return 0
 
