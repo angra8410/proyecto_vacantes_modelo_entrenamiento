@@ -28,6 +28,7 @@ class VacancyExtractor:
     """Extractor de campos de vacantes desde texto desestructurado."""
     
     # Patrones para detectar campos clave
+    # Nota: Se usa $ para coincidir con fin de línea (no \Z) ya que procesamos texto multilínea
     PATTERNS = {
         'cargo': [
             r'(?:cargo|puesto|posición|position|rol|role|título|title):\s*(.+?)(?:\n|$)',
@@ -47,7 +48,7 @@ class VacancyExtractor:
         ],
         'modalidad': [
             r'(?:modalidad|work mode|modo de trabajo):\s*([^\n]+)',
-            r'\b((?:remoto|remote|híbrido|hybrid|presencial|on-?site)[^\n]*?(?:\([^)]+\))?)\b',
+            r'\b((?:remoto|remote|híbrido|hybrid|presencial|on-?site)[^\n]*)\b',
         ],
         'requerimientos': [
             r'(?:requerimientos|requirements|requisitos|qualifications|skills|must have):\s*(.+?)(?=\n\n|$)',
