@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# coding: utf-8
+"""
+save_correction_local.py
+Añade al dataset local la versión corregida de nueva_aplicacion.yaml junto con vacante.txt.
+Uso:
+  python save_correction_local.py vacante.txt nueva_aplicacion.yaml
+"""
+import sys, json, os
+from pathlib import Path
+
+if len(sys.argv) < 3:
+    print("Uso: python save_correction_local.py vacante.txt nueva_aplicacion.yaml")
+    sys.exit(1)
+
+vac_path = sys.argv[1]
+yaml_path = sys.argv[2]
+
+# --- Resuelve TRAIN_FILE respecto a la ubicación del script para evitar escribir en venv/data ---
+SCRIPT_PATH = Path(__file__).resolve()
+# Si guardas este script en la raíz del proyecto, parent es la raíz.
+# Si lo estás manteniendo en scripts/, usa: PROJECT_ROOT = SCRIPT_PATH.parents[1]
+PROJECT_ROOT = SCRIPT_PATH.parent
+DATA_DIR = PROJECT_ROOT / 'data'
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+TRAIN_FILE = str(DATA_DIR / 'training_data.jsonl')
+# --- fin resolución ---
+
+os.makedirs(os.path.dirname(TRAIN_FILE), exist_ok=True)
+
+with open(vac_path, 'r', encoding='utf-8') as f:
+    text = f.read()
+with open(yaml_path, 'r', encoding='utf-8') as f:
+    yaml_text = f.read()
+
+obj = {"text": text, "yaml": yaml_text}
+with open(TRAIN_FILE, 'a', encoding='utf-8') as f:
+    f.write(json.dumps(obj, ensure_ascii=False) + '\n')
+
+print("Corrección añadida a", TRAIN_FILE)
