@@ -46,14 +46,14 @@ class VacancyExtractor:
             r'\b(\d{1,2}[-/]\d{1,2}[-/]\d{4})\b',
         ],
         'modalidad': [
-            r'(?:modalidad|work mode|modo de trabajo|ubicación|location):\s*([^\n]+?(?:remoto|remote|híbrido|hybrid|presencial|on-?site))',
-            r'\b(remoto|remote|híbrido|hybrid|presencial|on-?site|virtual|teletrabajo|work from (?:home|anywhere))\b',
+            r'(?:modalidad|work mode|modo de trabajo):\s*([^\n]+)',
+            r'\b((?:remoto|remote|híbrido|hybrid|presencial|on-?site)[^\n]*?(?:\([^)]+\))?)\b',
         ],
         'requerimientos': [
-            r'(?:requerimientos|requirements|requisitos|qualifications|skills|must have):\s*(.+?)(?=\n\n|\Z)',
+            r'(?:requerimientos|requirements|requisitos|qualifications|skills|must have):\s*(.+?)(?=\n\n|$)',
         ],
         'descripcion': [
-            r'(?:descripción|description|sobre el puesto|about the (?:role|position)|job description|what you\'ll do):\s*(.+?)(?=\n\n|\Z)',
+            r'(?:descripción|description|sobre el puesto|about the (?:role|position)|job description|what you\'ll do):\s*(.+?)(?=\n\n|$)',
         ],
     }
     
@@ -185,20 +185,20 @@ class VacancyExtractor:
             return '\n'.join([f"- {b.strip()}" for b in bullets])
         
         # Buscar secciones numeradas
-        numbered_pattern = r'(?:^|\n)(\d+[\.)]\s*.+?)(?=\n\d+[\.)|\n\n|\Z)'
+        numbered_pattern = r'(?:^|\n)(\d+[.\)]\s*.+?)(?=\n\d+[.\)]|\n\n|$)'
         numbered_matches = re.findall(numbered_pattern, text, re.MULTILINE | re.DOTALL)
         if numbered_matches and len(numbered_matches) >= 2:
             reqs_list = []
             for match in numbered_matches:
                 # Limpiar y formatear
-                clean = re.sub(r'^\d+[\.)]\s*', '', match.strip())
+                clean = re.sub(r'^\d+[.\)]\s*', '', match.strip())
                 if clean:
                     reqs_list.append(f"- {clean}")
             if reqs_list:
                 return '\n'.join(reqs_list)
         
         # Buscar sección "Must have" o similar
-        must_have_pattern = r'(?:must have|requirements|requisitos):\s*(.+?)(?=\n\n|\Z)'
+        must_have_pattern = r'(?:must have|requirements|requisitos):\s*(.+?)(?=\n\n|$)'
         must_have = re.search(must_have_pattern, text, re.IGNORECASE | re.DOTALL)
         if must_have:
             return must_have.group(1).strip()

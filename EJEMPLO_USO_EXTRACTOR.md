@@ -60,7 +60,7 @@ python scripts/extract_vacantes_from_text.py \
 cargo: Desarrollador Full Stack Senior
 empresa: TechStart Solutions
 fecha: '2025-01-28'
-modalidad: Híbrido (3 días remoto
+modalidad: Híbrido (3 días remoto, 2 días oficina)
 descripcion: |
   Trabajarás en proyectos innovadores desarrollando aplicaciones web modernas. 
   Serás parte de un equipo ágil colaborando directamente con diseñadores y 
