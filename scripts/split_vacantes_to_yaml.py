@@ -4,11 +4,23 @@ from datetime import datetime
 
 # Palabras que NO deben ser empresa ni cargo
 IGNORE_LINES = {
-    "easy apply","save","share","show more options","logo",
-    "matches your job preferences","apply","about the job",
-    "remote","full-time","contract","hybrid","on-site",
-    "colombia","capital district","latin america","bogo"
+    "easy apply","save","share","show more options","logo","apply",
+    "matches your job preferences","about the job","remote","full-time","contract",
+    "hybrid","on-site","colombia","capital district","latin america","bogo",
+    "promoted by hirer","actively reviewing applicants","over 100 applicants",
+    "over 100 people clicked apply","your profile matches some required qualifications",
+    "your profile is missing required qualifications","show match details","tailor my resume",
+    "help me update my profile","create cover letter","beta","is this information helpful?",
+    "people you can reach out to","meet the hiring team","message","show all"
 }
+IGNORE_PATTERNS = [
+    r"\d+\s+(applicants|people clicked apply)",
+    r".*logo$",
+    r".*·.*(remote|híbrido|presencial|colombia|latin america|capital district).*",
+    r"^promoted by hirer$",
+    r"^\s*$",
+    r"^[A-Z][a-z]+\slogo$"
+]
 
 def normalize_filename(s):
     s = s.lower()
@@ -28,33 +40,33 @@ def detect_modalidad(text):
                 return "presencial"
     return ""
 
-def clean_line(line):
-    return line.strip().lower()
-
 def is_valid(line):
-    l = clean_line(line)
-    return l and l not in IGNORE_LINES and not l.endswith("logo") and not re.match(r"\s*[\d]+ (applicants|people clicked apply)", l)
+    l = line.strip().lower()
+    if l in IGNORE_LINES:
+        return False
+    for pat in IGNORE_PATTERNS:
+        if re.match(pat, l):
+            return False
+    return bool(l)
 
 def extract_cargo_empresa(text):
-    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    lines = [l.strip() for l in text.splitlines() if is_valid(l)]
     cargo, empresa = "", ""
-    # 1. Busca patrón típico: "Cargo\nEmpresa · Ubicación"
+    # 1. Busca "Cargo\nEmpresa · Ubicación"
     for i in range(len(lines)-1):
         l1, l2 = lines[i], lines[i+1]
-        if is_valid(l1) and is_valid(l2):
-            # Si la segunda línea contiene "·", lo que va antes suele ser empresa
-            if "·" in l2 and not any(x in l2.lower() for x in IGNORE_LINES):
-                empresa_candidate = l2.split("·")[0].strip()
-                if is_valid(empresa_candidate):
-                    cargo = l1
-                    empresa = empresa_candidate
-                    break
-    # 2. Busca la primera línea válida después de "logo" que no sea acción/ubicación
+        if "·" in l2 and not any(x in l2.lower() for x in IGNORE_LINES):
+            empresa_candidate = l2.split("·")[0].strip()
+            if is_valid(empresa_candidate):
+                cargo = l1
+                empresa = empresa_candidate
+                break
+    # 2. Busca después del "logo"
     if not empresa:
         for i in range(len(lines)):
             if "logo" in lines[i].lower():
                 for k in range(i+1, len(lines)):
-                    if is_valid(lines[k]) and not any(x in lines[k].lower() for x in IGNORE_LINES):
+                    if is_valid(lines[k]):
                         empresa = lines[k]
                         # Cargo suele estar en la siguiente línea válida después de empresa
                         for m in range(k+1, len(lines)):
@@ -63,7 +75,7 @@ def extract_cargo_empresa(text):
                                 break
                         break
                 break
-    # 3. Fallback: primer línea válida que no sea acción/ubicación
+    # 3. Fallback: primer línea válida no ubicación ni acción
     if not empresa:
         for line in lines:
             if is_valid(line) and not any(x in line.lower() for x in IGNORE_LINES):
@@ -72,17 +84,26 @@ def extract_cargo_empresa(text):
     if not cargo:
         # Busca el primer cargo por heurística
         for line in lines:
-            if is_valid(line) and any(x in line.lower() for x in ["analista","business","developer","specialist","coordinator","manager","consultant","support","administration","data management","power bi","bi","desarrollador","funcional","calypso","back office","freight","administrador","procesos comerciales"]):
+            if is_valid(line) and any(x in line.lower() for x in [
+                "analista","business","developer","specialist","coordinator","manager",
+                "consultant","support","administration","data management","power bi","bi",
+                "desarrollador","funcional","calypso","back office","freight","administrador",
+                "procesos comerciales"]):
                 cargo = line
                 break
     # Limpieza final
     cargo = cargo.replace("·", "").strip()
     empresa = empresa.replace("·", "").strip()
+    # Si empresa es ubicación, ignora
+    if empresa.lower() in IGNORE_LINES or not empresa or empresa == cargo:
+        empresa = ""
     return cargo, empresa
 
 def extract_requerimientos(text):
     requerimientos = []
-    req_match = re.findall(r'(?:Requerimientos|Requirements|Responsabilidades Clave|Key Responsibilities|Qualifications|Responsabilidades|Responsabilidades principales|What We’re Looking For|Lo que buscamos en ti|Condiciones de trabajo|Skills|Required Skills|Responsabilidades:|Requisitos:|Requisitos y conocimientos del Rol:|Qué buscamos en ti:|Lo que harás:|What You’ll Do:)\s*[\n:]*([\s\S]*?)(?:\n{2,}|$)', text, re.IGNORECASE)
+    req_match = re.findall(
+        r'(?:Requerimientos|Requirements|Responsabilidades Clave|Key Responsibilities|Qualifications|Responsabilidades|Responsabilidades principales|What We’re Looking For|Lo que buscamos en ti|Condiciones de trabajo|Skills|Required Skills|Responsabilidades:|Requisitos:|Requisitos y conocimientos del Rol:|Qué buscamos en ti:|Lo que harás:|What You’ll Do:)\s*[\n:]*([\s\S]*?)(?:\n{2,}|$)',
+        text, re.IGNORECASE)
     for req_block in req_match:
         for line in req_block.splitlines():
             line = line.strip('-• \n\t')
