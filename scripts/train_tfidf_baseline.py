@@ -79,9 +79,19 @@ def train_tfidf_baseline(dataset_file, output_dir='models'):
         return 1
     
     # Split data
-    X_train, X_test, y_train, y_test = train_test_split(
-        texts, labels, test_size=0.2, random_state=42, stratify=labels
-    )
+    # Check if we can stratify (need at least 2 samples per class)
+    label_counts = Counter(labels)
+    can_stratify = all(count >= 2 for count in label_counts.values())
+    
+    if can_stratify:
+        X_train, X_test, y_train, y_test = train_test_split(
+            texts, labels, test_size=0.2, random_state=42, stratify=labels
+        )
+    else:
+        print("Warning: Some classes have fewer than 2 samples. Splitting without stratification.")
+        X_train, X_test, y_train, y_test = train_test_split(
+            texts, labels, test_size=0.2, random_state=42
+        )
     
     print(f"\nTraining set: {len(X_train)} examples")
     print(f"Test set: {len(X_test)} examples")

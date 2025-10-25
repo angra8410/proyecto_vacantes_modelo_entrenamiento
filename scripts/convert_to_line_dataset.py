@@ -23,6 +23,9 @@ def convert_to_line_dataset(input_file, output_dir):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     
+    # Create two files: 
+    # 1. line_dataset.jsonl - for training/testing
+    # 2. line_dataset_review.jsonl - for manual review/labeling (can be modified by review tool)
     output_file = output_dir / "line_dataset.jsonl"
     review_file = output_dir / "line_dataset_review.jsonl"
     

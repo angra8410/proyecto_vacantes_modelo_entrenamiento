@@ -17,11 +17,12 @@ class ReviewLabelTool:
     
     LABELS = ['role', 'company', 'other', 'skip']
     
-    def __init__(self, input_file, output_file):
+    def __init__(self, input_file, output_file, text_preview_length=100):
         self.input_file = input_file
         self.output_file = output_file
         self.reviewed_count = 0
         self.skipped_count = 0
+        self.text_preview_length = text_preview_length
     
     def review(self):
         """Start the interactive review process."""
@@ -55,7 +56,9 @@ class ReviewLabelTool:
                     try:
                         data = json.loads(line.strip())
                         
-                        print(f"\n[{line_num}] Text: {data.get('text', '')[:100]}...")
+                        text = data.get('text', '')
+                        preview = text[:self.text_preview_length] + ('...' if len(text) > self.text_preview_length else '')
+                        print(f"\n[{line_num}] Text: {preview}")
                         print(f"Current label: {data.get('label', 'unlabeled')}")
                         
                         choice = input("Select label (1-4): ").strip()
@@ -121,6 +124,12 @@ def main():
         required=True,
         help='Output JSONL file for labeled data'
     )
+    parser.add_argument(
+        '--preview-length',
+        type=int,
+        default=100,
+        help='Number of characters to show in text preview (default: 100)'
+    )
     
     args = parser.parse_args()
     
@@ -128,7 +137,7 @@ def main():
         print(f"Error: Input file not found: {args.input}")
         return 1
     
-    tool = ReviewLabelTool(args.input, args.out)
+    tool = ReviewLabelTool(args.input, args.out, args.preview_length)
     tool.review()
     
     return 0
