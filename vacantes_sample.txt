@@ -1,0 +1,169 @@
+cargo: Senior MS Power BI Developer
+empresa: Proxify
+fecha: 2025-01-15
+descripcion: |
+  We are looking for a Senior Microsoft Power BI developer for one of our clients. 
+  You are a perfect candidate if you are growth-oriented, you love what you do, 
+  and you enjoy working on new ideas to develop exciting products and growth features.
+requerimientos: |
+  - Background with BI tools and systems such as Power BI, Tableau, and SAP
+  - Prior experience in data-related tasks
+  - Understanding of the Microsoft BI Stack
+  - Mastery in data analytics
+  - Proficiency in software development
+  - Familiarity with MS SQL Server BI Stack tools and technologies
+ubicacion: Colombia (Remote)
+tipo_contrato: Contract
+---
+cargo: Senior Business Analyst
+empresa: TP
+fecha: 2025-01-18
+descripcion: |
+  We're looking for a Sales Operations & Planning Analyst to support our growing 
+  IT Technology Services organization. This role plays a key part in optimizing 
+  sales operations, driving data insights, and supporting strategic planning 
+  across global teams.
+requerimientos: |
+  - Degree in Engineering, Business Administration, or related field
+  - 3+ years of experience in IT sales operations or business analytics
+  - Proficiency with Microsoft Excel, PowerPoint, Power BI, Tableau
+  - Experience with Salesforce (highly desirable)
+  - Strong analytical mindset and business acumen
+  - English level: B2 or higher
+ubicacion: Bogotá, Colombia (Remote)
+tipo_contrato: Full-time
+---
+cargo: Change and Configuration Analyst
+empresa: Kruger Inc.
+fecha: 2025-01-18
+descripcion: |
+  The Change and Configuration Analyst is responsible for driving Change Management 
+  and Configuration management within the IT organization. This role ensures that 
+  IT changes are systematically planned, tested, approved, and deployed with 
+  minimal risk and disruption to the business.
+requerimientos: |
+  - A high school diploma or equivalent is required
+  - Associate's or bachelor's degree in IT, Computer Science, or related field preferred
+  - ITIL v4 Foundation certification preferred
+  - Previous experience in IT Service Management
+  - Solid understanding of ITIL processes
+  - Experience managing data quality in a CMDB or similar system
+ubicacion: Medellín, Colombia (Hybrid)
+tipo_contrato: Full-time
+---
+cargo: Power BI Developer
+empresa: Georgia IT, Inc.
+fecha: 2025-01-20
+descripcion: |
+  Power BI Developer for a 12 months plus contract. Candidate must be located 
+  in Latin America and available to start immediately.
+requerimientos: |
+  - Bachelor's degree in Computer Science, Information Systems, Data Analytics
+  - 5 years of experience developing reports and dashboards using Power BI
+  - Strong knowledge of Power Query (M) and DAX
+  - Experience with data modeling and ETL processes
+  - Proficiency in SQL for querying and managing databases
+  - Understanding of data warehousing concepts
+ubicacion: Latin America (Remote)
+tipo_contrato: Contract
+---
+cargo: Business Analyst
+empresa: UST España & Latam
+fecha: 2025-01-05
+descripcion: |
+  Business Analyst role requiring relocation to Málaga, Spain. Until relocation 
+  is complete, selected candidate will work remotely in Spanish time zone (CET). 
+  Once in Málaga, the role will be hybrid.
+requerimientos: |
+  - Degree in Business Administration, Engineering or similar
+  - 4+ years of experience as Business Analyst in technology projects
+  - Experience in requirements gathering for system design
+  - Knowledge of credit risk and counterparty metrics
+  - Data analysis and reconciliation capabilities
+  - Advanced English (C1)
+  - Experience working with Agile methodologies
+ubicacion: Colombia (Remote)
+tipo_contrato: Full-time
+---
+cargo: 
+empresa: Iron Mountain
+fecha: 2025-01-12
+descripcion: |
+  Iron Mountain is seeking a bilingual (English - Spanish) highly analytical, 
+  experienced Workforce Administration & Data Management Analyst to join our 
+  Workforce Administration (WFA) team.
+requerimientos: |
+  - 3-5 years of experience in HR operations or HR administration
+  - Strong knowledge of HRIS systems (Workday strongly preferred)
+  - Proven ability to interact with outsourced service provider
+  - Full professional proficiency in English and Spanish
+ubicacion: Colombia (Remote)
+tipo_contrato: Full-time
+---
+cargo: Business Intelligence Analyst
+empresa: INDI Staffing Services
+fecha: 2025-01-17
+descripcion: |
+  We are looking for a Business Intelligence Analyst to join our team. This 
+  professional will be responsible for taking raw information and constructing 
+  narratives that help our business colleagues to make better decisions.
+requerimientos: |
+  - At least 3 years of experience developing BI dashboards and reports
+  - Understanding of Tableau administration and security
+  - At least 1 year of previous work experience using Tableau
+  - Solid understanding of relational data modeling concepts
+  - Strong analytic skills with hands-on approach
+  - Advanced English level
+ubicacion: Latin America (Remote)
+tipo_contrato: Full-time
+---
+cargo: Operations Support Specialist
+empresa: Simera
+fecha: 2025-01-20
+descripcion: |
+  We are seeking an Operations Support Specialist with CPG/Retail experience to 
+  join our dynamic team and play a critical role in supporting daily operations, 
+  strategic initiatives, and executive-level projects.
+requerimientos: |
+  - Bachelor's degree in Business Administration or Operations Management
+  - 1-3 years of experience in operations or business support
+  - Previous experience in CPG, retail, or distribution industries
+  - Strong analytical skills with proficiency in Excel and PowerPoint
+  - Excellent communication skills in English and Spanish
+  - Strong organizational and time management skills
+ubicacion: Latin America (Remote)
+tipo_contrato: Full-time
+---
+cargo: Workforce Coordinator - WFM
+empresa: Foundever
+fecha: 2025-01-11
+descripcion: |
+  We are looking for a Bilingual Forecasting Specialist (English/Spanish) with 
+  proven experience in Workforce Management (WFM) and advanced forecasting 
+  methodologies within the BPO industry.
+requerimientos: |
+  - Bilingual in Spanish and English
+  - Minimum 3 years of forecasting experience within BPO/contact center
+  - Solid knowledge of WFM principles and contact center operations
+  - Proficiency with Microsoft Office Suite
+  - Experience with WFM tools (IEX, Verint preferred)
+  - Strong analytical and problem-solving skills
+ubicacion: Bogotá, Colombia (Remote)
+tipo_contrato: Full-time
+---
+cargo: Analista Funcional BI
+empresa: BigCheese
+fecha: 2025-01-20
+descripcion: |
+  Buscamos un Analista Funcional BI que quiera sumarse a nuestro equipo, con 
+  ganas de desarrollarse en un ambiente que apuesta al crecimiento y al trabajo 
+  colaborativo. Tu misión será traducir las necesidades de negocio de los 
+  clientes en soluciones técnicas.
+requerimientos: |
+  - Estudios en Ingeniería de Sistemas, Informática o similares
+  - Mínimo 3 años realizando funciones similares
+  - Experiencia en ecosistema de datos de AWS con Redshift, Athena y QuickSight
+  - Conocimiento y manejo de herramientas de BI
+  - Capacidad para trabajar en equipo de manera efectiva
+ubicacion: Colombia (Remote)
+tipo_contrato: Full-time

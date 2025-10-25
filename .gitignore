@@ -12,6 +12,9 @@ data/
 *.pkl
 *.pickle
 
+# Output directories
+output/
+
 # Model files (not to be versioned)
 models/
 *.h5
