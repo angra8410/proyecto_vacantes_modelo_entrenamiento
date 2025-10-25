@@ -2,6 +2,14 @@ import os
 import re
 from datetime import datetime
 
+# Palabras que NO deben ser empresa ni cargo
+IGNORE_LINES = {
+    "easy apply","save","share","show more options","logo",
+    "matches your job preferences","apply","about the job",
+    "remote","full-time","contract","hybrid","on-site",
+    "colombia","capital district","latin america","bogo"
+}
+
 def normalize_filename(s):
     s = s.lower()
     s = re.sub(r"[áéíóúü]", lambda m: "aeiouu"["áéíóúü".index(m.group(0))], s)
@@ -20,56 +28,56 @@ def detect_modalidad(text):
                 return "presencial"
     return ""
 
+def clean_line(line):
+    return line.strip().lower()
+
+def is_valid(line):
+    l = clean_line(line)
+    return l and l not in IGNORE_LINES and not l.endswith("logo") and not re.match(r"\s*[\d]+ (applicants|people clicked apply)", l)
+
 def extract_cargo_empresa(text):
     lines = [l.strip() for l in text.splitlines() if l.strip()]
-    cargo = ""
-    empresa = ""
-    # Busca patrón cargo/empresa en bloques
+    cargo, empresa = "", ""
+    # 1. Busca patrón típico: "Cargo\nEmpresa · Ubicación"
     for i in range(len(lines)-1):
-        # Cargo: línea con palabras clave de cargos
-        if re.search(r'(analista|business|developer|specialist|coordinator|manager|consultant|support|administration|data management|power bi|bi|desarrollador|funcional|calypso|back office|freight|administrador|procesos comerciales)', lines[i].lower()) and "logo" not in lines[i].lower():
-            # Empresa: siguiente línea con mayúscula, sin palabras de ubicación ni cargos
-            next_line = lines[i+1]
-            if (
-                re.match(r'^[A-Z][a-zA-Z0-9\s&\-\.,]+$', next_line)
-                and "logo" not in next_line.lower()
-                and not any(x in next_line.lower() for x in ["colombia","remote","híbrido","presencial","analista","business"])
-            ):
-                cargo = lines[i]
-                empresa = next_line
-                break
-    # Si no encontró, busca línea con "·" y toma lo anterior
-    if not empresa:
-        for line in lines:
-            if "·" in line:
-                parts = line.split("·")
-                empresa_candidate = parts[0].strip()
-                if (
-                    empresa_candidate
-                    and "colombia" not in empresa_candidate.lower()
-                    and "remote" not in empresa_candidate.lower()
-                ):
+        l1, l2 = lines[i], lines[i+1]
+        if is_valid(l1) and is_valid(l2):
+            # Si la segunda línea contiene "·", lo que va antes suele ser empresa
+            if "·" in l2 and not any(x in l2.lower() for x in IGNORE_LINES):
+                empresa_candidate = l2.split("·")[0].strip()
+                if is_valid(empresa_candidate):
+                    cargo = l1
                     empresa = empresa_candidate
                     break
-    # Fallback: primer nombre propio que no sea ubicación/cargo
+    # 2. Busca la primera línea válida después de "logo" que no sea acción/ubicación
+    if not empresa:
+        for i in range(len(lines)):
+            if "logo" in lines[i].lower():
+                for k in range(i+1, len(lines)):
+                    if is_valid(lines[k]) and not any(x in lines[k].lower() for x in IGNORE_LINES):
+                        empresa = lines[k]
+                        # Cargo suele estar en la siguiente línea válida después de empresa
+                        for m in range(k+1, len(lines)):
+                            if is_valid(lines[m]):
+                                cargo = lines[m]
+                                break
+                        break
+                break
+    # 3. Fallback: primer línea válida que no sea acción/ubicación
     if not empresa:
         for line in lines:
-            if (
-                re.match(r'^[A-Z][a-zA-Z0-9\s&\-\.,]+$', line)
-                and "colombia" not in line.lower()
-                and "remote" not in line.lower()
-                and "híbrido" not in line.lower()
-                and "presencial" not in line.lower()
-                and "analista" not in line.lower()
-                and "business" not in line.lower()
-            ):
+            if is_valid(line) and not any(x in line.lower() for x in IGNORE_LINES):
                 empresa = line
                 break
-    # Cargo fallback
     if not cargo:
-        m = re.search(r'(analista|business|developer|specialist|coordinator|manager|consultant|support|administration|data management|power bi|bi|desarrollador|funcional|calypso|back office|freight|administrador|procesos comerciales)[^\n]*', text, re.IGNORECASE)
-        if m:
-            cargo = m.group(0).strip()
+        # Busca el primer cargo por heurística
+        for line in lines:
+            if is_valid(line) and any(x in line.lower() for x in ["analista","business","developer","specialist","coordinator","manager","consultant","support","administration","data management","power bi","bi","desarrollador","funcional","calypso","back office","freight","administrador","procesos comerciales"]):
+                cargo = line
+                break
+    # Limpieza final
+    cargo = cargo.replace("·", "").strip()
+    empresa = empresa.replace("·", "").strip()
     return cargo, empresa
 
 def extract_requerimientos(text):
@@ -78,7 +86,7 @@ def extract_requerimientos(text):
     for req_block in req_match:
         for line in req_block.splitlines():
             line = line.strip('-• \n\t')
-            if line and len(line) > 4:
+            if line and len(line) > 4 and is_valid(line):
                 requerimientos.append(line)
     return requerimientos
 
