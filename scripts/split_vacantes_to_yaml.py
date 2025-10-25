@@ -2,7 +2,6 @@ import os
 import re
 from datetime import datetime
 
-# Palabras que NO deben ser empresa ni cargo
 IGNORE_LINES = {
     "easy apply","save","share","show more options","logo","apply",
     "matches your job preferences","about the job","remote","full-time","contract",
@@ -11,7 +10,8 @@ IGNORE_LINES = {
     "over 100 people clicked apply","your profile matches some required qualifications",
     "your profile is missing required qualifications","show match details","tailor my resume",
     "help me update my profile","create cover letter","beta","is this information helpful?",
-    "people you can reach out to","meet the hiring team","message","show all"
+    "people you can reach out to","meet the hiring team","message","show all",
+    "job poster"
 }
 IGNORE_PATTERNS = [
     r"\d+\s+(applicants|people clicked apply)",
@@ -50,48 +50,45 @@ def is_valid(line):
     return bool(l)
 
 def extract_cargo_empresa(text):
-    lines = [l.strip() for l in text.splitlines() if is_valid(l)]
+    lines = [l.strip() for l in text.splitlines()]
+    lines_filtered = [l for l in lines if is_valid(l)]
     cargo, empresa = "", ""
-    # 1. Busca "Cargo\nEmpresa · Ubicación"
-    for i in range(len(lines)-1):
-        l1, l2 = lines[i], lines[i+1]
-        if "·" in l2 and not any(x in l2.lower() for x in IGNORE_LINES):
-            empresa_candidate = l2.split("·")[0].strip()
-            if is_valid(empresa_candidate):
-                cargo = l1
+    # 1. Busca el patrón "Empresa logo" seguido de la empresa real y luego el cargo principal
+    for i in range(len(lines_filtered)-2):
+        if "logo" in lines_filtered[i].lower() and is_valid(lines_filtered[i+1]) and is_valid(lines_filtered[i+2]):
+            empresa_candidate = lines_filtered[i+1]
+            cargo_candidate = lines_filtered[i+2]
+            # Asegúrate que la empresa no sea "Job poster"
+            if empresa_candidate.lower() != "job poster" and is_valid(empresa_candidate):
                 empresa = empresa_candidate
+                cargo = cargo_candidate
                 break
-    # 2. Busca después del "logo"
+    # 2. Busca "Cargo\nEmpresa · Ubicación"
+    if not empresa or not cargo:
+        for i in range(len(lines_filtered)-1):
+            l1, l2 = lines_filtered[i], lines_filtered[i+1]
+            if "·" in l2 and is_valid(l2):
+                empresa_candidate = l2.split("·")[0].strip()
+                if is_valid(empresa_candidate) and empresa_candidate.lower() != "job poster":
+                    cargo = l1
+                    empresa = empresa_candidate
+                    break
+    # 3. Fallback: primer línea válida no ubicación ni acción para empresa
     if not empresa:
-        for i in range(len(lines)):
-            if "logo" in lines[i].lower():
-                for k in range(i+1, len(lines)):
-                    if is_valid(lines[k]):
-                        empresa = lines[k]
-                        # Cargo suele estar en la siguiente línea válida después de empresa
-                        for m in range(k+1, len(lines)):
-                            if is_valid(lines[m]):
-                                cargo = lines[m]
-                                break
-                        break
-                break
-    # 3. Fallback: primer línea válida no ubicación ni acción
-    if not empresa:
-        for line in lines:
-            if is_valid(line) and not any(x in line.lower() for x in IGNORE_LINES):
+        for line in lines_filtered:
+            if is_valid(line) and line.lower() != "job poster":
                 empresa = line
                 break
+    # 4. Fallback para cargo
     if not cargo:
-        # Busca el primer cargo por heurística
-        for line in lines:
+        for line in lines_filtered:
             if is_valid(line) and any(x in line.lower() for x in [
                 "analista","business","developer","specialist","coordinator","manager",
                 "consultant","support","administration","data management","power bi","bi",
                 "desarrollador","funcional","calypso","back office","freight","administrador",
-                "procesos comerciales"]):
+                "procesos comerciales","analyst"]):
                 cargo = line
                 break
-    # Limpieza final
     cargo = cargo.replace("·", "").strip()
     empresa = empresa.replace("·", "").strip()
     # Si empresa es ubicación, ignora
