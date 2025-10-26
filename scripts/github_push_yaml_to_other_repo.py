@@ -10,12 +10,21 @@ TOKEN = os.getenv("GH_TOKEN")
 
 def get_modified_or_added_yaml_files():
     # Obtiene archivos modificados o agregados en el último commit
+    # Compara HEAD con su padre (HEAD^) para detectar cambios
     result = subprocess.run(
-        ["git", "diff-tree", "--no-commit-id", "--name-status", "-r", "HEAD"],
+        ["git", "diff-tree", "--no-commit-id", "--name-status", "-r", "HEAD^", "HEAD"],
         capture_output=True, text=True
     )
+    
+    # Debug: mostrar todos los archivos detectados
+    print("DEBUG: Archivos detectados por git diff-tree:")
+    print(result.stdout if result.stdout else "(sin salida)")
+    print("---")
+    
     files = []
     for line in result.stdout.splitlines():
+        if '\t' not in line:
+            continue
         status, fname = line.split('\t', 1)
         # status: 'A' (added) o 'M' (modified)
         if fname.startswith(f"{SRC_DIR}/") and fname.endswith(".yaml") and status in ("A", "M"):
@@ -23,6 +32,7 @@ def get_modified_or_added_yaml_files():
     return files
 
 yaml_files = get_modified_or_added_yaml_files()
+print(f"DEBUG: Archivos YAML detectados en {SRC_DIR}/: {yaml_files}")
 if not yaml_files:
     print("No hay archivos YAML agregados/modificados en el último commit.")
     exit(0)
