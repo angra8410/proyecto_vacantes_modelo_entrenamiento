@@ -1,13 +1,13 @@
-Interactive Resources - iR logo
-Interactive Resources - iR
+Inceed logo
+Inceed
 Share
 Show more options
-Power BI Developer 
-United States · 1 day ago · Over 100 applicants
+BI Developer 
+Denver, CO · Reposted 4 days ago · Over 100 applicants
 Promoted by hirer · Actively reviewing applicants
 
 
-$60/hr - $65/hr
+$50/hr - $80/hr
 
  Remote
 Matches your job preferences, workplace type is Remote.
@@ -18,14 +18,14 @@ Matches your job preferences, job type is Contract.
 Easy Apply
 
 Save
-Save Power BI Developer  at Interactive Resources - iR
-Power BI Developer
-Interactive Resources - iR · United States (Remote)
+Save BI Developer  at Inceed
+BI Developer
+Inceed · Denver, CO (Remote)
 
 Easy Apply
 
 Save
-Save Power BI Developer  at Interactive Resources - iR
+Save BI Developer  at Inceed
 Show more options
 Your profile matches some required qualifications
 
@@ -46,35 +46,39 @@ Is this information helpful?
 
 
 About the job
-Power BI Developer / Consultant (Remote | 3–6 Month Contract | Extensions Likely)
+Position: BI Developer
+Compensation: $50 - $80 /hour, depending on experience
+Location: Fully Remote
+Inceed has partnered with a great company to help find a skilled BI Developer to join their team!
+Are you a data wizard ready to make a significant impact? This is a fantastic opportunity to work with a dynamic team focused on exploration and development in the energy industry. This roll will support business growth and requires someone with a knack for data manipulation and analysis. If you thrive in a fast-paced environment and enjoy delivering detailed insights, this role is perfect for you!
+Key Responsibilities & Duties:
 
+Manipulate and analyze log data effectively
+Develop BI solutions for Land and Business Development
+Collaborate with teams on Quorum Land projects
+Work with lease data to provide valuable insights
+Maintain and manage current project load
+Deliver detailed and accurate data requirements
+Required Qualifications & Experience:
 
+Proficiency in Python for data manipulation
+Strong data analysis skills
+Experience in Land and Business Development
+Ability to work independently and meet deadlines
+Nice to Have Skills & Experience:
 
-We’re seeking a Power BI Developer / Consultant to take ownership of Power BI development, optimization, and admin setup for a growing organization in the agricultural financing industry.
+Experience with Quorum Land software
+Familiarity with lease data management
+Perks & Benefits:
 
+3 different medical health insurance plans, dental, and vision insurance
+Voluntary and Long-term disability insurance
+Paid time off, 401k, and holiday pay
+Weekly direct deposit or pay card deposit
+Other Information:
 
-This is a fully remote contract role (3–6 months, with extensions likely) ideal for someone who thrives working independently with minimal supervision.
+Background and drug screenings required
+If you are interested in learning more about the BI Developer opportunity, please submit your resume for consideration. Our client is unable to provide sponsorship at this time.
+We are Inceed, a staffing direct placement firm who believes in the possibility of something better. Our mission is simple: We’re here to help every person, whether client, candidate, or employee, find and secure what’s better for them.
 
-
-What You’ll Do:
-
-Develop, optimize, and administer Power BI solutions end-to-end
-Convert and enhance existing Power BI reports for improved performance and usability
-Strengthen Power Query (M) logic and DAX calculations
-Review and refine data models, ensuring multi-source integration and efficiency
-Evaluate and improve the overall Power BI environment following best practices
-
-
-What We’re Looking For:
-
-Proven experience in Power BI development, optimization, and admin setup
-Strong Power Query (M) and DAX expertise
-Solid background in data modeling and connecting multiple data sources
-Experience with performance tuning and workspace management
-Independent, self-directed work style — able to deliver with minimal guidance
-
-
-If you’re a Power BI expert who enjoys building and optimizing business intelligence environments from the ground up, this is a great opportunity to make an immediate impact in a fully remote setting.
-
-
-(Contract Duration: 3–6 months, extensions likely | Fully Remote)
+Inceed is an equal opportunity employer. Inceed prohibits discrimination and harassment of any type and affords equal employment opportunities to employees and applicants without regard to race, color, religion, sex, sexual orientation, gender identity, or expression, pregnancy, age, national origin, disability status, genetic information, protected veteran status, or any other characteristic protected by law.
