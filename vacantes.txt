@@ -1,11 +1,13 @@
-R. F. Wilkins Consultants, Inc. logo
-R. F. Wilkins Consultants, Inc.
+Interactive Resources - iR logo
+Interactive Resources - iR
 Share
 Show more options
-Power BI Developer (Part-Time / Contract)
-United States · 2 days ago · Over 100 people clicked apply
-Promoted by hirer · Responses managed off LinkedIn
+Power BI Developer 
+United States · 1 day ago · Over 100 applicants
+Promoted by hirer · Actively reviewing applicants
 
+
+$60/hr - $65/hr
 
  Remote
 Matches your job preferences, workplace type is Remote.
@@ -13,17 +15,17 @@ Matches your job preferences, workplace type is Remote.
  Contract
 Matches your job preferences, job type is Contract.
 
-Apply
+Easy Apply
 
 Save
-Save Power BI Developer (Part-Time / Contract) at R. F. Wilkins Consultants, Inc.
-Power BI Developer (Part-Time / Contract)
-R. F. Wilkins Consultants, Inc. · United States (Remote)
+Save Power BI Developer  at Interactive Resources - iR
+Power BI Developer
+Interactive Resources - iR · United States (Remote)
 
-Apply
+Easy Apply
 
 Save
-Save Power BI Developer (Part-Time / Contract) at R. F. Wilkins Consultants, Inc.
+Save Power BI Developer  at Interactive Resources - iR
 Show more options
 Your profile matches some required qualifications
 
@@ -44,21 +46,35 @@ Is this information helpful?
 
 
 About the job
-Company Description
- 
-R.F. Wilkins Consultants is a New York-based Development and Management Consulting Firm. We partner with government agencies, non-profits, and for-profit businesses to drive results. Our hands-on team of project managers leads fundraising and capital campaigns and utilizes strategic leadership to bring our clients' most challenging projects to fruition. We leverage our clients' existing initiatives to achieve the desired results for their company.
+Power BI Developer / Consultant (Remote | 3–6 Month Contract | Extensions Likely)
 
- Role Description
- 
-This is a part-time, contract role for a Power BI Developer. The Power BI Developer will be responsible for creating and managing data models, developing dashboards, and performing data warehousing. Additionally, the role involves extracting, transforming, and loading data (ETL) processes and using analytical skills to interpret data. This is a remote role.
 
- Qualifications
- 
-Data Modeling, Data Warehousing, and ETL skills
-Experience in creating and managing Dashboards
-Strong Analytical Skills
-Proficiency in Power BI or similar tools
-Excellent written and verbal communication skills
-Ability to work independently and remotely
-Experience in consulting or project management is a plus
-Bachelor's degree in Computer Science, Data Analytics, or related field
+
+We’re seeking a Power BI Developer / Consultant to take ownership of Power BI development, optimization, and admin setup for a growing organization in the agricultural financing industry.
+
+
+This is a fully remote contract role (3–6 months, with extensions likely) ideal for someone who thrives working independently with minimal supervision.
+
+
+What You’ll Do:
+
+Develop, optimize, and administer Power BI solutions end-to-end
+Convert and enhance existing Power BI reports for improved performance and usability
+Strengthen Power Query (M) logic and DAX calculations
+Review and refine data models, ensuring multi-source integration and efficiency
+Evaluate and improve the overall Power BI environment following best practices
+
+
+What We’re Looking For:
+
+Proven experience in Power BI development, optimization, and admin setup
+Strong Power Query (M) and DAX expertise
+Solid background in data modeling and connecting multiple data sources
+Experience with performance tuning and workspace management
+Independent, self-directed work style — able to deliver with minimal guidance
+
+
+If you’re a Power BI expert who enjoys building and optimizing business intelligence environments from the ground up, this is a great opportunity to make an immediate impact in a fully remote setting.
+
+
+(Contract Duration: 3–6 months, extensions likely | Fully Remote)
