@@ -1,370 +1,14 @@
-ClearpointCo logo
-ClearpointCo
+Capgemini logo
+Capgemini
 Share
 Show more options
-Data Analyst
-Greater Houston · 21 hours ago · Over 100 applicants
-Promoted by hirer · No response insights available yet
-
-
-$60/hr - $70/hr
-
- Remote
-Matches your job preferences, workplace type is Remote.
-
- Contract
-Matches your job preferences, job type is Contract.
-
-Easy Apply
-
-Save
-Save Data Analyst at ClearpointCo
-Data Analyst
-ClearpointCo · Greater Houston (Remote)
-
-Easy Apply
-
-Save
-Save Data Analyst at ClearpointCo
-Show more options
-Your profile is missing required qualifications
-
-
-Show match details
-
-Help me update my profile
-
-
-BETA
-
-Is this information helpful?
-
-
-
-Meet the hiring team
-Karl Brunner
-Karl Brunner  
- 3rd
-Senior Strategic Staffing Leader | Large to Small Scale National Recruiting Initiatives | IT Project Solutions | IT Jobs
-Job poster
-
-Message
-About the job
-******POSTIVELY NO-THIRDS PLEASE******
-
-
-Excellent opportunity for a contract to hire opportunity to work for a very stable organization that is in the Pharmaceutical/Healthcare industry. This position is predominately remote with the exception of coming on-site for periodic team meetings.
-
-
-In full transparency, this position can start out in the $55.00-$65.00 W-2 range or $70.00 Corp-Corp until you convert to become a full-time employee, which in turn you will get a salary consistent with the hourly rate, but also the full benefits package too.
-
-
-Summary:
-
-
-The Data Analyst/Modeler will design Gold-layer star schemas and Power BI semantic models. You’ll partner with data engineering and BI to move data from Bronze → Silver → Gold in a Medallion architecture and deliver certified, performant metrics for leadership and operational teams responsible for cleaning up to optimize workflows. This position will require hands-on Data Modeler experience.
-
-
-Duties:
-- Commercial/Operations: Orders and order lines, inventory availability, shipment/fulfillment, returns, pricing, promotions, member subscriptions.
-- Membership lifecycle, entitlements, course enrollments and completions (CE), event attendance, certifications.
-- Product catalog (APIs, bases, devices), formulations/recipes and versioning, stability/BUD attributes, allergens, SDS/CoA linkage.
-- USP 795/797/800 compliance data, audit findings, corrective actions, sensitivity labeling, support case/ticketing.
-- Define model grain, surrogate keys, conformed dimensions (e.g., Customer/Account, Product, Practitioner, Date, Geography), and role-playing dimensions.
-- Implement SCD Type 1/2 in Delta (Warehouse/Lakehouse) for key dims (Customer, Product, Practitioner, Membership).
-- Handle late-arriving facts/dimensions, inferred members, and bridge tables for many-to-many (e.g., formulation → multiple actives/allergens).
-- Build and maintain Power BI semantic models
-- Clean star schemas, relationship management, hierarchies, display folders.
-- Author DAX measures for revenue, margin, order volume, fill rates/OTIF, inventory days, membership MRR/retention/churn, education completions, compliance KPIs.
-- Implement time intelligence (MTD/QTD/YTD, PY), semi-additive measures (inventory snapshots).
-- Configure incremental refresh, aggregations where needed, and Row-Level Security (e.g., by region/account team).
-- Propose partitioning/clustering/Z-ordering strategies in Delta; consider Warehouse materialized views for heavy rollups; reduce cardinality in Power BI; choose pre-aggregation vs. Aggregations in PBI.
-- Specify Silver contracts and quality checks (dedupe, CDC alignment, schema expectations).
-- Review Pipelines/Dataflows Gen2/Notebooks outputs for model-readiness and effective dating.
-- Maintain data dictionaries, lineage, SCD behavior, and certified metric definitions; apply sensitivity labels and endorsements.
-
-
-Requirements:
-
-
-- 7+ years of Data Modeling experience
-- 3+ years in data modeling or analytics engineering with strong SQL.
-- Hands-on Microsoft Fabric
-- Lakehouse/Warehouse, OneLake, Delta tables, Dataflows Gen2 or Pipelines; familiarity with SQL endpoint usage.
-- Star schemas; fact types (transactional, periodic snapshot, accumulating); bridge tables for M: N; degenerate and junk dimensions.
-- SCD Type 1/2 with MERGE; effective/expiry dating; handling late-arriving data.
-- Power BI semantic modeling and DAX
-- Clean tabular model design; CALCULATE/KEEPFILTERS/USERELATIONSHIP; date intelligence; semi-additive measures; model properties (data types, sort-by, formatting).
-- Incremental refresh; basic aggregations; RLS.
-- Define tests (unique/not-null/accepted values), document metrics, manage endorsements; apply sensitivity labels for PII/regulated data.
-Translate stakeholder requirements into grain/facts/dimensions and certified measures; collaborate across DE, BI, and business teams.
----
-RevenueWell logo
-RevenueWell
-Share
-Show more options
-Business Intelligence and Integrations Developer 
-United States · 12 hours ago · Over 100 applicants
-Promoted by hirer · No response insights available yet
-
-
- Remote
-Matches your job preferences, workplace type is Remote.
-
- Full-time
-Matches your job preferences, job type is Full-time.
-
-Easy Apply
-
-Save
-Save Business Intelligence and Integrations Developer  at RevenueWell
-Business Intelligence and Integrations Developer
-RevenueWell · United States (Remote)
-
-Easy Apply
-
-Save
-Save Business Intelligence and Integrations Developer  at RevenueWell
-Show more options
-Your profile matches several required qualifications
-
-
-Show match details
-
-Tailor my resume
-
-Help me standout
-
-Create cover letter
-
-
-BETA
-
-Is this information helpful?
-
-
-
-About the job
-Founded in 2010, we started RevenueWell because we saw a way to use the latest marketing automation technology to help dentists build better, more connected relationships with their patients and communities. We think it’s a problem worth solving, and thousands of dental practices across the country seem to agree. The company has grown very quickly over the last few years, and we’re now a team of about 200 diverse people that are committed to our mission, super-focused on our product, and fanatical about helping our customers succeed.
-
-
-In December 2019, we partnered with Marlin Equity Partners to help us aggressively expand our vision in healthcare. Since then, we have more than doubled our footprint (through strong organic growth and acquisition of PBHS) to over 12,000 customers, and we are just getting started! If you are excited about healthcare, working with talented people, aren’t afraid to roll up your sleeves, and want to help build a healthcare technology company that makes a real difference for providers and patients – this opportunity might just be for you.
-
-
-WHAT YOU'LL DO:
-As part of RevenueWell’s Data Warehouse and Business Intelligence team, the candidate will be responsible for designing, developing, and maintaining data warehouse and analytics architecture to meet the enterprise’s business analysis and reporting needs. This includes gathering of business requirements, maintaining ETL processes, and creating reporting structures.
-
-
-The individual should be self-motivated and able to perform various complex assignments without much supervision. Being both proactive and creative are important success factors in our fast-paced environment.
-
-
-A major part of this role is working on designing, developing, and maintaining the data warehouse and analytics architecture to meet the enterprise’s business analysis and reporting needs.
-
-
-The individual will work closely with the Business Intelligence Manager and representatives from all business units.
-
-
-Design, implement, and test the structure and schemas of the data warehouse
-Write workflows to implement extract, transform, and load methodologies
-Collaborate with business users to design effective UI/UX for reports and dashboards based on the item’s audience. (this includes branding, themes, visuals, etc)
-Interact with management, development, and business users across all departments to develop a strong understanding of the business needs and objectives
-Regularly communicate project progress, issues and risks to direct manager (and project manager where appropriate)
-Commitment to on-going education
-
-
-WHAT YOU MUST HAVE:
-Relevant experience developing business intelligence and reporting solutions
-Strong SQL skills
-Self-motivated and driven to produce quality products
-Strong organizational skills and attention to detail
-Strong analytical, consultative, and communication skills
-Proven ability to manage and prioritize multiple projects/deliverables simultaneously
-Strong commitment to deadlines and to client service (internal and external)
-Excellent troubleshooting and problem-solving skills
-Good collaboration skills when interacting with both technical and non-technical resources
-Strong knowledge of relational databases
-Proven ability to interpret data
-Understanding of database and business intelligence concepts
-A degree in Information Systems, Computer Science, Web Systems or other related degree (or work experience equivalent)
-
-
-PREFERRED QUALIFICATIONS
-Experience with operational and strategic reporting
-Experience with Microsoft Azure computing platform
-Excellent SQL development skills
-Strong experience developing ETL for a Data Warehouse
-Experience with columnar and/or big data technologies
-Experience with Zendesk
-Experience with Intercom
-Experience with Amazon Redshift
-Experience with SalesForce
-Experience with Netsuite
-
-
-RevenueWell is an Equal Opportunity Employer of minorities, females, protected veterans, and individuals with disabilities. Qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender perception or identity, national origin, age, marital status, protected veteran status, or disability status.
----
-Kforce Inc logo
-Kforce Inc
-Share
-Show more options
-Executive Reporting & Visualization Analyst 
-North Palm Beach, FL · Reposted 1 day ago · Over 100 applicants
-Promoted by hirer · Actively reviewing applicants
-
-
-$45/hr - $50/hr
-
- Remote
-Matches your job preferences, workplace type is Remote.
-
- Contract
-Matches your job preferences, job type is Contract.
-
-Easy Apply
-
-Save
-Save Executive Reporting & Visualization Analyst  at Kforce Inc
-Executive Reporting & Visualization Analyst
-Kforce Inc · North Palm Beach, FL (Remote)
-
-Easy Apply
-
-Save
-Save Executive Reporting & Visualization Analyst  at Kforce Inc
-Show more options
-Your profile matches several required qualifications
-
-
-Show match details
-
-Tailor my resume
-
-Help me standout
-
-Create cover letter
-
-
-BETA
-
-Is this information helpful?
-
-
-
-About the job
-Responsibilities
-
-Kforce has a client in Juno Beach, FL that is seeking an Executive Reporting & Visualization Analyst. Responsibilities:
-
- Design and refine PowerPoint templates for executive scorecards and reporting
- Collaborate with cybersecurity leads to translate complex data into visual narratives
- Support the creation of dashboards and visual artifacts using Power BI or Tableau
- Ensure consistency in branding, formatting, and messaging across all materials
- Assist in documentation and preparation of knowledge transfer materials
-
-Requirements
-
- To be considered for this position, candidates must have experience in a similar role, or they must possess significant knowledge, experience, and abilities to successfully perform the responsibilities listed
- Relevant education and/or training will be considered a plus
-
-The pay range is the lowest to highest compensation we reasonably in good faith believe we would pay at posting for this role. We may ultimately pay more or less than this range. Employee pay is based on factors like relevant education, qualifications, certifications, experience, skills, seniority, location, performance, union contract and business needs. This range may be modified in the future.
-
-We offer comprehensive benefits including medical/dental/vision insurance, HSA, FSA, 401(k), and life, disability & ADD insurance to eligible employees. Salaried personnel receive paid time off. Hourly employees are not eligible for paid time off unless required by law. Hourly employees on a Service Contract Act project are eligible for paid sick leave.
-
-Note: Pay is not considered compensation until it is earned, vested and determinable. The amount and availability of any compensation remains in Kforce's sole discretion unless and until paid and may be modified in its discretion consistent with the law.
-
-This job is not eligible for bonuses, incentives or commissions.
-
-Kforce is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, pregnancy, sexual orientation, gender identity, national origin, age, protected veteran status, or disability status.
-
-By clicking “Apply Today” you agree to receive calls, AI-generated calls, text messages or emails from Kforce and its affiliates, and service providers. Note that if you choose to communicate with Kforce via text messaging the frequency may vary, and message and data rates may apply. Carriers are not liable for delayed or undelivered messages. You will always have the right to cease communicating via text by using key words such as STOP.
----
-Robert Half logo
-Robert Half
-Share
-Show more options
-Business Analyst 
-Portage, MI · 1 day ago · 73 applicants
-Promoted by hirer · No response insights available yet
-
-
-$35/hr - $40/hr
-
- Remote
-Matches your job preferences, workplace type is Remote.
-
- Temporary
-Matches your job preferences, job type is Temporary.
-
-Easy Apply
-
-Save
-Save Business Analyst  at Robert Half
-Business Analyst
-Robert Half · Portage, MI (Remote)
-
-Easy Apply
-
-Save
-Save Business Analyst  at Robert Half
-Show more options
-Your profile matches several required qualifications
-
-
-Show match details
-
-Tailor my resume
-
-Help me standout
-
-Create cover letter
-
-
-BETA
-
-Is this information helpful?
-
-
-
-About the job
-We are looking for an experienced business analyst to join our remote team based in Portage, Michigan. In this long-term contract role, you will lead the development and support of enterprise-wide business intelligence systems, enabling data-driven decision-making across the organization. This position requires a proactive individual with strong problem-solving skills and the ability to work independently while collaborating with key stakeholders.
-
-
-Responsibilities:
-• Design and maintain enterprise-wide business intelligence applications and architecture to support organizational goals.
-• Partner with senior management in both IT and business units to identify, prioritize, and fulfill data and information needs.
-• Resolve complex technical challenges and optimize business intelligence tools for enhanced performance.
-• Develop testing methodologies and criteria to ensure the reliability and effectiveness of business intelligence solutions.
-• Provide training and coaching to users, empowering them to utilize business intelligence tools for improved decision-making.
-• Establish and implement standards, policies, and procedures for business intelligence systems and tools.
-• Monitor and improve data quality by developing metrics and frameworks that ensure accuracy and consistency.
-• Conduct research on emerging technologies and create business cases for innovative enterprise-wide solutions.
-• Collaborate effectively across teams to align business intelligence solutions with organizational objectives.
-
-• Bachelor’s degree or equivalent experience in a related field.
-• Minimum of 2 years of experience in business intelligence or related roles.
-• Strong knowledge of SQL and Azure Data Factory.
-• Proficient in designing and implementing enterprise business intelligence solutions.
-• Demonstrated ability to solve complex technical problems independently.
-• Experience in developing policies, procedures, and quality metrics for business intelligence systems.
-• Excellent communication and customer service skills, with the ability to train and support users.
-• Analytical mindset with a focus on data accuracy and decision-making capabilities.
-Technology Doesn't Change the World, People Do.®
-
-Robert Half is the world’s first and largest specialized talent solutions firm that connects highly qualified job seekers to opportunities at great companies. We offer contract, temporary and permanent placement solutions for finance and accounting, technology, marketing and creative, legal, and administrative and customer support roles.
-
-Robert Half works to put you in the best position to succeed. We provide access to top jobs, competitive compensation and benefits, and free online training. Stay on top of every opportunity - whenever you choose - even on the go. Download the Robert Half app and get 1-tap apply, notifications of AI-matched jobs, and much more.
-
-All applicants applying for U.S. job openings must be legally authorized to work in the United States. Benefits are available to contract/temporary professionals, including medical, vision, dental, and life and disability insurance. Hired contract/temporary professionals are also eligible to enroll in our company 401(k) plan. Visit roberthalf.gobenefits.net for more information.
----
-Numeratus.us logo
-Numeratus.us
-Share
-Show more options
-Remote- Blockchain Analyst
-United States · 3 hours ago · 23 applicants
+FBS Data Analyst-PowerBI 
+Colombia · 3 weeks ago · Over 100 applicants
 No response insights available yet
 
 
+MX$1/yr
+
  Remote
 Matches your job preferences, workplace type is Remote.
 
@@ -374,14 +18,108 @@ Matches your job preferences, job type is Full-time.
 Easy Apply
 
 Save
-Save Remote- Blockchain Analyst at Numeratus.us
-Remote- Blockchain Analyst
-Numeratus.us · United States (Remote)
+Save FBS Data Analyst-PowerBI  at Capgemini
+FBS Data Analyst-PowerBI
+Capgemini · Colombia (Remote)
 
 Easy Apply
 
 Save
-Save Remote- Blockchain Analyst at Numeratus.us
+Save FBS Data Analyst-PowerBI  at Capgemini
+Show more options
+Your profile matches some required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me update my profile
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
+
+
+
+People you can reach out to
+
+
+
+Laura Valentina and others in your network
+
+Show all
+About the job
+Our Client is one of the United States' largest insurers, providing a wide range of insurance and financial services products with gross written premiums well over US$25 Billion (P&C). They proudly serve more than 10 million U.S. households with more than 19 million individual policies across all 50 states through the efforts of over 48,000 exclusive and independent agents and nearly 18,500 employees. Finally, our Client is part of one the largest Insurance Groups in the world.
+
+This role focuses on using data and analytics to support business growth, especially in areas like agency development, recruiting, and marketing programs. You'll work with large datasets, build reports in Power BI and Excel, and help the company make smart decisions based on data.
+
+Requirements
+
+1-3 years of experience of business research, analytics or related field required. Insurance industry experience preferred
+Bachelor's degree preferred in business, statistical or related field
+Data Analysis - Intermediate
+Databases - Intermediate
+Power BI
+Excel
+SQL
+Modeling - Entry Level
+Build Reports: Create dashboards and reports using Power BI and Excel to track performance and support decision-making
+Work with Big Data: Handle and analyze large amounts of data to find insights and solve business problems
+Support Agency Development: Analyze programs related to new agent recruitment, promotions, and agency performance
+Advanced Analytics: Help with predictive and prescriptive analytics projects that guide business strategy
+ROI Analysis: Calculate the return on investment for marketing and recruiting programs
+Market Research: Study competitors and market trends to help shape strategy
+Cross-Team Collaboration: Work with different departments to understand their needs and deliver data-driven solutions
+Documentation & Communication: Clearly communicate your findings and keep records of your work
+
+Benefits
+
+Competitive compensation and benefits package:
+
+Competitive salary and performance-based bonuses
+Comprehensive benefits package
+Career development and training opportunities
+Flexible work arrangements (remote and/or office-based)
+Dynamic and inclusive work culture within a globally renowned group
+Private Health Insurance
+Pension Plan
+Paid Time Off
+Training & Development
+
+Note: Benefits differ based on employee level.
+---
+Clear Point Consultants logo
+Clear Point Consultants
+Share
+Show more options
+PowerBI Developer - Biotech - REMOTE
+United States · Reposted 1 week ago · Over 100 applicants
+Promoted by hirer · Actively reviewing applicants
+
+
+$85/hr - $99/hr
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Contract
+Matches your job preferences, job type is Contract.
+
+Easy Apply
+
+Save
+Save PowerBI Developer - Biotech - REMOTE at Clear Point Consultants
+PowerBI Developer - Biotech - REMOTE
+Clear Point Consultants · United States (Remote)
+
+Easy Apply
+
+Save
+Save PowerBI Developer - Biotech - REMOTE at Clear Point Consultants
 Show more options
 Your profile matches some required qualifications
 
@@ -402,22 +140,433 @@ Is this information helpful?
 
 
 About the job
-Company Description
- 
-Numeratus.us provides comprehensive accounting services to small and mid-sized companies looking to grow in the digital age. Our technology-driven approach streamlines processes and allows us to efficiently manage the back office for our clients. Our range of services includes E-B5/E-2 Accounting, Risk Management, Cryptocurrency Accounting, Content Creation & Digital Service Accounting, Sales Tax, Privacy & General Accounting. Join us and experience the difference!
+🚀 Now Hiring: Power BI Developer (Pharma Data / Veeva)
 
- Role Description
- 
-This is a full-time remote role for a Blockchain Analyst. The Blockchain Analyst will be responsible for conducting detailed blockchain analysis, integrating and interpreting cryptocurrency data, and supporting finance-related tasks associated with digital assets. The role requires thorough analytical skills and familiarity with the blockchain ecosystem to ensure accurate reporting and insightful analysis.
 
- Qualifications
+
+Our client, a leading pharmaceutical company, is looking for a Power BI Developer with strong experience working with pharma data and Veeva systems. This is a remote contract role, but the position is based out of Boston — candidates must be comfortable working EST hours.
+
+
+W2 only
+No 1099 or c2c or 3rd party submissions
+No visa sponsorship available
+
+
+What You’ll Do:
+
+Build and optimize Power BI dashboards and reports using pharma and Veeva datasets
+Collaborate with business and data teams to deliver actionable analytics
+Extract and transform data, ideally from Snowflake (big plus!)
+Support ongoing data visualization and reporting initiatives
+What We’re Looking For:
+
+Proven experience as a Power BI Developer
+Hands-on work with Veeva and pharmaceutical data models
+Strong SQL and data modeling skills
+Experience with Snowflake highly preferred
+If you’re a Power BI expert with pharma industry experience and ready to jump into a new contract role — we’d love to connect!
+---
+Perfict logo
+Perfict
+Share
+Show more options
+Power BI Developer
+United States · 1 week ago · Over 100 people clicked apply
+Promoted by hirer · Responses managed off LinkedIn
+
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Contract
+Matches your job preferences, job type is Contract.
+
+Apply
+
+Save
+Save Power BI Developer at Perfict
+Job match summary not available
+This job post doesn't have enough information to generate a match summary.
+About the job
+
+Job Title : Power BI Developer
+Location: Remote
+Duration : 6Months
+
+Roles & Responsibilities :
+Bachelor's degree
+3-5+ years of related experience
+Must have Tableau migration reports experience to Power BI
+Must be a strong Power BI developer and recent
+DAX experience
+SQL
+Data transformation
+Power Apps
+
+
+Desired Skills and Experience
+POWER BI
+TABLEAU
+POWER BI
+SQL
+DAX
+---
+Medasource logo
+Medasource
+Share
+Show more options
+Business Intelligence Developer 
+United States · 6 days ago · Over 100 applicants
+Promoted by hirer · Actively reviewing applicants
+
+
+$30/hr - $40/hr
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Full-time
+Matches your job preferences, job type is Full-time.
+
+Easy Apply
+
+Save
+Save Business Intelligence Developer  at Medasource
+Business Intelligence Developer
+Medasource · United States (Remote)
+
+Easy Apply
+
+Save
+Save Business Intelligence Developer  at Medasource
+Show more options
+Your profile matches some required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me update my profile
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
+
+
+
+About the job
+Title: Business Intelligence Developer
+Location: 100% Remote
+Contract Length: 12-months with likely extensions
+
+
+Requirement
+
+Build/maintain BI reports and dashboards using Lawson data sources.
+Develop data models and crosswalks; validate metrics and trends.
+Investigate data discrepancies; document lineage and refresh cadence.
+
+
+Required Experience
+
+3–5 years BI/analytics; strong SQL and a mainstream BI tool.
+Experience sourcing ERP data (Lawson preferred).
+
+
+Preferred
+
+Workday Prism/Report Writer familiarity; healthcare domain knowledge.
+
+
+*Applicants without experience in a Lawson/Infor environment will not be considered at this time*
+---
+Motion Recruitment logo
+Motion Recruitment
+Share
+Show more options
+Business Intelligence Developer 
+United States · 3 weeks ago · Over 100 applicants
+Promoted by hirer · Actively reviewing applicants
+
+
+Up to $60/hr
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Contract
+Matches your job preferences, job type is Contract.
+
+Easy Apply
+
+Save
+Save Business Intelligence Developer  at Motion Recruitment
+Business Intelligence Developer
+Motion Recruitment · United States (Remote)
+
+Easy Apply
+
+Save
+Save Business Intelligence Developer  at Motion Recruitment
+Show more options
+Your profile is missing required qualifications
+
+
+Show match details
+
+Help me update my profile
+
+
+BETA
+
+Is this information helpful?
+
+
+
+About the job
+Our Client, an Enterprise Business & Data Solutions Company. is seeking a Power BI Developer (5+ years) to join their team on a 12-month W2 contract. This role is fully remote but requires working EST hours.
+
+
+REMOTE (EST)
+
+Duration: 12 Month W2 Contract - open to conversion/extension 
+
+
+
+You’ll build and optimize Power BI dashboards and implement automation solutions with Power Automate and Azure Logic Apps to drive enterprise-wide reporting and insights.
+
+
+What You’ll Bring:
+
+5+ years of Power BI development (DAX, data modeling, dashboards)
+Hands-on experience with Power Automate & Azure Logic Apps
+Strong SQL skills & enterprise-scale data experience
+Excellent problem-solving & communication skills
+Nice to Have:
+
+Azure Data Services (Data Factory, Synapse, etc.)
+Experience with other BI/reporting tools
+Daily Work:
+
+70% Power BI development & visualization
+30% automation solutions & workflows
+---
+CornerStone Technology Talent Services logo
+CornerStone Technology Talent Services
+Share
+Show more options
+Data Visualization Developer
+Dallas-Fort Worth Metroplex · 1 week ago · Over 100 applicants
+Promoted by hirer · Actively reviewing applicants
+
+
+$60/hr - $70/hr
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Contract
+Matches your job preferences, job type is Contract.
+
+Easy Apply
+
+Save
+Save Data Visualization Developer at CornerStone Technology Talent Services
+Data Visualization Developer
+CornerStone Technology Talent Services · Dallas-Fort Worth Metroplex (Remote)
+
+Easy Apply
+
+Save
+Save Data Visualization Developer at CornerStone Technology Talent Services
+Show more options
+Your profile matches some required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me update my profile
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
+
+
+
+Meet the hiring team
+Zandro Navarro
+Zandro Navarro  
+ 3rd
+Recruiting Team Lead, Technology Talent Services
+Job poster
+
+Message
+About the job
+Data Visualization Developer (Power BI / SQL / SSMS)
+
+Location: Remote (must reside in TX)
+Employment Type: Long Term Contract
+
+
+About the Role
+
+CornerStone Technology Talent Services is seeking a Data Visualization Developer to support a short-term project focused on migrating Tableau reports into Power BI. This position requires a self-starter who is data-curious, analytical, and capable of working independently to find and present data-driven solutions.
+
+
+The ideal candidate is an experienced business intelligence professional who can design, develop, and deliver high-quality data visualizations that enable effective decision-making in clinical and operational domains.
+
+
+Key Responsibilities
+
+Lead development of reporting dashboards and data visualizations for clinical, operational, and quality performance metrics.
+Collaborate with cross-functional teams to define business requirements and translate them into technical solutions.
+Analyze source systems, define transformation requirements, and design dimensional data models.
+Develop, document, and maintain data models, dashboards, and reporting mechanisms.
+Serve as a liaison between IT and business stakeholders in a Technical Product Owner capacity.
+Ensure accuracy, clarity, and usability of all reports and dashboards.
+Provide guidance and training to business users on data visualization tools and reporting best practices.
+Support the identification and definition of KPIs and measurement methodologies for quality and outcomes tracking.
+
+
+Required Skills and Experience
+
+5+ years of experience in Business Intelligence or Analytics.
+3+ years of hands-on SQL experience (SSMS).
+3+ years with Power BI (Power BI Desktop and Service required).
+Proficiency with relational databases and dimensional data modeling (3–5 years).
+Proven experience with data visualization design and dashboard best practices.
+Experience in Agile methodology environments.
+Bachelor’s degree in Computer Science, Information Systems, or related field (or equivalent experience).
+Healthcare or Home Health industry experience, especially with Home Care Home Base systems or OASIS datasets.
+Familiarity with Microsoft Azure Data Factory or Data Warehouse solutions.
+
+
+Why Join CornerStone Technology Talent Services
+
+At CornerStone, we connect top technology professionals with innovative organizations that value expertise, collaboration, and results. Join us to take part in meaningful projects that transform how data drives performance and care quality.
+---
+First Coast Energy, LLP ; Daily's Convenience Stores logo
+First Coast Energy, LLP ; Daily's Convenience Stores
+Share
+Show more options
+Business Insights Developer 
+Jacksonville, FL · 1 month ago · Over 100 applicants
+Promoted by hirer · No response insights available yet
+
+
+ On-site
+Matches your job preferences, workplace type is On-site.
+
+ Full-time
+Matches your job preferences, job type is Full-time.
+
+Easy Apply
+
+Save
+Save Business Insights Developer  at First Coast Energy, LLP ; Daily's Convenience Stores
+Business Insights Developer
+First Coast Energy, LLP ; Daily's Convenience Stores · Jacksonville, FL (On-site)
+
+Easy Apply
+
+Save
+Save Business Insights Developer  at First Coast Energy, LLP ; Daily's Convenience Stores
+Show more options
+Your profile matches some required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me update my profile
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
+
+
+
+Meet the hiring team
+Bobby Price
+Bobby Price  
+ 3rd
+Chief Financial Officer at First Coast Energy, LLP ; Daily's Convenience Stores
+Job poster
+
+Message
+About the job
+About the Company
+
+First Coast Energy, L.L.P. owns and operates Daily’s, Mountain Energy, and Shell-branded convenience stores across North Carolina, South Florida, and Northeast Florida.
+
+
+About the Role
+
+The BI Developer works closely with our Chief Financial Officer to design, develop, and optimize intelligence solutions that transform enterprise-level data into actionable insights. This position supports the organization by building solutions that align with strategic objectives. Duties are performed at corporate headquarters in Jacksonville, FL.
+
+
+Responsibilities
+
+
+
+Design, develop, and deploy advanced BI solutions, to include dashboards, reports, and data visualizations supporting executive and operational decision-making.
+Write complex Structured Query Language (SQL) to extract, transform, and analyze data from databases.
+Construct and optimize data models that promote efficient querying, reporting, and scalability across large datasets.
+Collaborate with internal stakeholders and executives to understand reporting needs, define KPIs, and translate analytic requirements into technical specifications.
+Devise and manage ETL processes to collect data from diverse source systems, clean & standardize into functional format, and load into a central data warehouse.
+Conduct regular system testing and troubleshoot BI tools.
+Monitor data quality, integrity, and security across platforms.
+Implement and enforce data governance, security, and quality standards within BI solutions.
+Maintain current knowledge of emerging BI tools, cloud platforms, and industry trends, proactively recommending new technologies and methods aligned with business goals.
+Provide technical guidance, knowledge sharing, and mentorship to junior analysts.
+
+
+Minimum Qualifications
+
+
+
+BA/BS in Computer Science, Information Systems, Data Analytics, or a related field; equivalent combination of education and experience may be considered.
+5+ years of progressive experience in business intelligence development, data analytics, or related fields.
+Advanced proficiency in BI platforms such as Power BI, Tableau, or Qlik, including custom DAX/MDX development or advanced visualization techniques.
+Strong expertise in SQL and relational database management, with demonstrated experience handling large and complex datasets.
+Solid understanding of data warehousing concepts, dimensional modeling, and ETL processes.
+Experience integrating data from multiple sources, including on-premise and cloud-based systems.
+Sophisticated communication skills to include effective interface with both technical and non-technical stakeholders.
+Solid understanding of basic financial principles, including P&L impact and pricing strategies.
+Must pass a pre-employment background check and drug screen.
+
+
  
-Blockchain Analysis and Blockchain skills
-Cryptocurrency knowledge
-Strong Analytical Skills
-Finance knowledge and experience
-Excellent written and verbal communication skills
-Ability to work independently and remotely
-Experience in the accounting industry is a plus
-Bachelor's degree in Finance, Accounting, or related field
+Preferred Qualifications
+
+
+
+Master’s degree in a related discipline.
+Prior experience in a BI developer or data architect role.
+Demonstrated ability to lead BI solution design and independently manage complex projects.
+
+
+Physical & Mental Requirements:
+
+Articulate verbal and written communication in English; effectively hear, speak, read, and write in a professional environment. 
+Ability to analyze complex datasets to identify trends, patterns, and opportunities.
+Sufficient close visual acuity to accurately perform reading and typing functions on standard computer systems.
+Ability to sit for extended periods of time.
+Ability to manage time efficiently and execute assignments under minimal supervision.
+Interpersonal aptitude; must effectively collaborate with cross-functional teams of data analysts, data engineers, and business leaders. 
+Refined organizational skills; ability to adapt in a multi-task, corporate business environment with fluctuating priorities.
+Ability to drive independently.
 ---
