@@ -1,42 +1,38 @@
-Optimiza Food Systems logo
-Optimiza Food Systems
+ClearpointCo logo
+ClearpointCo
 Share
 Show more options
-Data Analyst (Remote)
-United States · 13 hours ago · 2 people clicked apply
-Responses managed off LinkedIn
+Data Analyst
+Greater Houston · 21 hours ago · Over 100 applicants
+Promoted by hirer · No response insights available yet
 
 
-$35/hr - $40/hr
+$60/hr - $70/hr
 
  Remote
 Matches your job preferences, workplace type is Remote.
 
- Part-time
-Matches your job preferences, job type is Part-time.
+ Contract
+Matches your job preferences, job type is Contract.
 
-Apply
-
-Save
-Save Data Analyst (Remote) at Optimiza Food Systems
-Data Analyst (Remote)
-Optimiza Food Systems · United States (Remote)
-
-Apply
+Easy Apply
 
 Save
-Save Data Analyst (Remote) at Optimiza Food Systems
+Save Data Analyst at ClearpointCo
+Data Analyst
+ClearpointCo · Greater Houston (Remote)
+
+Easy Apply
+
+Save
+Save Data Analyst at ClearpointCo
 Show more options
-Your profile matches several required qualifications
+Your profile is missing required qualifications
 
 
 Show match details
 
-Tailor my resume
-
-Help me standout
-
-Create cover letter
+Help me update my profile
 
 
 BETA
@@ -45,60 +41,72 @@ Is this information helpful?
 
 
 
+Meet the hiring team
+Karl Brunner
+Karl Brunner  
+ 3rd
+Senior Strategic Staffing Leader | Large to Small Scale National Recruiting Initiatives | IT Project Solutions | IT Jobs
+Job poster
+
+Message
 About the job
-Exciting Career Opportunity - Join Our Team!
-
-We are looking for dedicated and motivated individuals to join our team and contribute to our continued success. This position offers a chance to grow professionally in a supportive and inclusive environment, with flexibility and long-term career potential.
-
-Employment Type: Full-Time / Part-Time
-
-Salary Range: $35-40/hr., Competitive, based on experience and qualifications
-
-Job Summary
-
-The ideal candidate will perform a range of tasks to support daily operations, contribute to team goals, and uphold our standards of excellence. This role requires a proactive attitude, a willingness to learn, and a commitment to quality and professionalism.
-
- Support day-to-day operations and team functions
- Maintain accuracy and attention to detail in assigned tasks
- Communicate effectively with team members and clients
- Adhere to company policies, procedures, and deadlines
- Take initiative and show flexibility in handling tasks
- Contribute to a positive and respectful work culture
-
-Qualifications
-
- High school diploma or equivalent (college degree a plus)
- Basic computer and communication skills
- Strong organizational and time management abilities
- Ability to work independently or as part of a team
- Adaptable and willing to learn new tools or systems
-
-Benefits
-
- Competitive salary with opportunities for increases
- Flexible work hours and remote options (if applicable)
- Opportunities for career growth and advancement
- Ongoing training and development
- Health, dental, and vision insurance (if applicable)
- Paid time off and holiday benefits
- Employee support programs and recognition
-
-Take the next step in your career and apply today. We are excited to learn more about you!
+******POSTIVELY NO-THIRDS PLEASE******
 
 
-Desired Skills and Experience
-Typing
+Excellent opportunity for a contract to hire opportunity to work for a very stable organization that is in the Pharmaceutical/Healthcare industry. This position is predominately remote with the exception of coming on-site for periodic team meetings.
+
+
+In full transparency, this position can start out in the $55.00-$65.00 W-2 range or $70.00 Corp-Corp until you convert to become a full-time employee, which in turn you will get a salary consistent with the hourly rate, but also the full benefits package too.
+
+
+Summary:
+
+
+The Data Analyst/Modeler will design Gold-layer star schemas and Power BI semantic models. You’ll partner with data engineering and BI to move data from Bronze → Silver → Gold in a Medallion architecture and deliver certified, performant metrics for leadership and operational teams responsible for cleaning up to optimize workflows. This position will require hands-on Data Modeler experience.
+
+
+Duties:
+- Commercial/Operations: Orders and order lines, inventory availability, shipment/fulfillment, returns, pricing, promotions, member subscriptions.
+- Membership lifecycle, entitlements, course enrollments and completions (CE), event attendance, certifications.
+- Product catalog (APIs, bases, devices), formulations/recipes and versioning, stability/BUD attributes, allergens, SDS/CoA linkage.
+- USP 795/797/800 compliance data, audit findings, corrective actions, sensitivity labeling, support case/ticketing.
+- Define model grain, surrogate keys, conformed dimensions (e.g., Customer/Account, Product, Practitioner, Date, Geography), and role-playing dimensions.
+- Implement SCD Type 1/2 in Delta (Warehouse/Lakehouse) for key dims (Customer, Product, Practitioner, Membership).
+- Handle late-arriving facts/dimensions, inferred members, and bridge tables for many-to-many (e.g., formulation → multiple actives/allergens).
+- Build and maintain Power BI semantic models
+- Clean star schemas, relationship management, hierarchies, display folders.
+- Author DAX measures for revenue, margin, order volume, fill rates/OTIF, inventory days, membership MRR/retention/churn, education completions, compliance KPIs.
+- Implement time intelligence (MTD/QTD/YTD, PY), semi-additive measures (inventory snapshots).
+- Configure incremental refresh, aggregations where needed, and Row-Level Security (e.g., by region/account team).
+- Propose partitioning/clustering/Z-ordering strategies in Delta; consider Warehouse materialized views for heavy rollups; reduce cardinality in Power BI; choose pre-aggregation vs. Aggregations in PBI.
+- Specify Silver contracts and quality checks (dedupe, CDC alignment, schema expectations).
+- Review Pipelines/Dataflows Gen2/Notebooks outputs for model-readiness and effective dating.
+- Maintain data dictionaries, lineage, SCD behavior, and certified metric definitions; apply sensitivity labels and endorsements.
+
+
+Requirements:
+
+
+- 7+ years of Data Modeling experience
+- 3+ years in data modeling or analytics engineering with strong SQL.
+- Hands-on Microsoft Fabric
+- Lakehouse/Warehouse, OneLake, Delta tables, Dataflows Gen2 or Pipelines; familiarity with SQL endpoint usage.
+- Star schemas; fact types (transactional, periodic snapshot, accumulating); bridge tables for M: N; degenerate and junk dimensions.
+- SCD Type 1/2 with MERGE; effective/expiry dating; handling late-arriving data.
+- Power BI semantic modeling and DAX
+- Clean tabular model design; CALCULATE/KEEPFILTERS/USERELATIONSHIP; date intelligence; semi-additive measures; model properties (data types, sort-by, formatting).
+- Incremental refresh; basic aggregations; RLS.
+- Define tests (unique/not-null/accepted values), document metrics, manage endorsements; apply sensitivity labels for PII/regulated data.
+Translate stakeholder requirements into grain/facts/dimensions and certified measures; collaborate across DE, BI, and business teams.
 ---
-EMK CONSULTORIA logo
-EMK CONSULTORIA
+RevenueWell logo
+RevenueWell
 Share
 Show more options
-Virtual Data Analyst Full Time (100% Remote)
-United States · 26 minutes ago · 1 applicant
-No response insights available yet
+Business Intelligence and Integrations Developer 
+United States · 12 hours ago · Over 100 applicants
+Promoted by hirer · No response insights available yet
 
-
-$35/hr - $40/hr
 
  Remote
 Matches your job preferences, workplace type is Remote.
@@ -109,14 +117,14 @@ Matches your job preferences, job type is Full-time.
 Easy Apply
 
 Save
-Save Virtual Data Analyst Full Time (100% Remote) at EMK CONSULTORIA
-Virtual Data Analyst Full Time (100% Remote)
-EMK CONSULTORIA · United States (Remote)
+Save Business Intelligence and Integrations Developer  at RevenueWell
+Business Intelligence and Integrations Developer
+RevenueWell · United States (Remote)
 
 Easy Apply
 
 Save
-Save Virtual Data Analyst Full Time (100% Remote) at EMK CONSULTORIA
+Save Business Intelligence and Integrations Developer  at RevenueWell
 Show more options
 Your profile matches several required qualifications
 
@@ -137,57 +145,279 @@ Is this information helpful?
 
 
 About the job
-Exciting Career Opportunity - Join Our Team!
-
-We are looking for dedicated and motivated individuals to join our team and contribute to our continued success. This position offers a chance to grow professionally in a supportive and inclusive environment, with flexibility and long-term career potential.
-
-Employment Type: Full-Time / Part-Time
-
-Salary Range: $35-40/hr
-
-Job Summary:
-
-The ideal candidate will perform a range of tasks to support daily operations, contribute to team goals, and uphold our standards of excellence. This role requires a proactive attitude, a willingness to learn, and a commitment to quality and professionalism.
-
-Key Responsibilities:
+Founded in 2010, we started RevenueWell because we saw a way to use the latest marketing automation technology to help dentists build better, more connected relationships with their patients and communities. We think it’s a problem worth solving, and thousands of dental practices across the country seem to agree. The company has grown very quickly over the last few years, and we’re now a team of about 200 diverse people that are committed to our mission, super-focused on our product, and fanatical about helping our customers succeed.
 
 
- Support day-to-day operations and team functions
- Maintain accuracy and attention to detail in assigned tasks
- Communicate effectively with team members and clients
- Adhere to company policies, procedures, and deadlines
- Take initiative and show flexibility in handling tasks
- Contribute to a positive and respectful work culture
+In December 2019, we partnered with Marlin Equity Partners to help us aggressively expand our vision in healthcare. Since then, we have more than doubled our footprint (through strong organic growth and acquisition of PBHS) to over 12,000 customers, and we are just getting started! If you are excited about healthcare, working with talented people, aren’t afraid to roll up your sleeves, and want to help build a healthcare technology company that makes a real difference for providers and patients – this opportunity might just be for you.
+
+
+WHAT YOU'LL DO:
+As part of RevenueWell’s Data Warehouse and Business Intelligence team, the candidate will be responsible for designing, developing, and maintaining data warehouse and analytics architecture to meet the enterprise’s business analysis and reporting needs. This includes gathering of business requirements, maintaining ETL processes, and creating reporting structures.
+
+
+The individual should be self-motivated and able to perform various complex assignments without much supervision. Being both proactive and creative are important success factors in our fast-paced environment.
+
+
+A major part of this role is working on designing, developing, and maintaining the data warehouse and analytics architecture to meet the enterprise’s business analysis and reporting needs.
+
+
+The individual will work closely with the Business Intelligence Manager and representatives from all business units.
+
+
+Design, implement, and test the structure and schemas of the data warehouse
+Write workflows to implement extract, transform, and load methodologies
+Collaborate with business users to design effective UI/UX for reports and dashboards based on the item’s audience. (this includes branding, themes, visuals, etc)
+Interact with management, development, and business users across all departments to develop a strong understanding of the business needs and objectives
+Regularly communicate project progress, issues and risks to direct manager (and project manager where appropriate)
+Commitment to on-going education
+
+
+WHAT YOU MUST HAVE:
+Relevant experience developing business intelligence and reporting solutions
+Strong SQL skills
+Self-motivated and driven to produce quality products
+Strong organizational skills and attention to detail
+Strong analytical, consultative, and communication skills
+Proven ability to manage and prioritize multiple projects/deliverables simultaneously
+Strong commitment to deadlines and to client service (internal and external)
+Excellent troubleshooting and problem-solving skills
+Good collaboration skills when interacting with both technical and non-technical resources
+Strong knowledge of relational databases
+Proven ability to interpret data
+Understanding of database and business intelligence concepts
+A degree in Information Systems, Computer Science, Web Systems or other related degree (or work experience equivalent)
+
+
+PREFERRED QUALIFICATIONS
+Experience with operational and strategic reporting
+Experience with Microsoft Azure computing platform
+Excellent SQL development skills
+Strong experience developing ETL for a Data Warehouse
+Experience with columnar and/or big data technologies
+Experience with Zendesk
+Experience with Intercom
+Experience with Amazon Redshift
+Experience with SalesForce
+Experience with Netsuite
+
+
+RevenueWell is an Equal Opportunity Employer of minorities, females, protected veterans, and individuals with disabilities. Qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender perception or identity, national origin, age, marital status, protected veteran status, or disability status.
+---
+Kforce Inc logo
+Kforce Inc
+Share
+Show more options
+Executive Reporting & Visualization Analyst 
+North Palm Beach, FL · Reposted 1 day ago · Over 100 applicants
+Promoted by hirer · Actively reviewing applicants
+
+
+$45/hr - $50/hr
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Contract
+Matches your job preferences, job type is Contract.
+
+Easy Apply
+
+Save
+Save Executive Reporting & Visualization Analyst  at Kforce Inc
+Executive Reporting & Visualization Analyst
+Kforce Inc · North Palm Beach, FL (Remote)
+
+Easy Apply
+
+Save
+Save Executive Reporting & Visualization Analyst  at Kforce Inc
+Show more options
+Your profile matches several required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me standout
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
 
 
 
+About the job
+Responsibilities
 
-Qualifications:
+Kforce has a client in Juno Beach, FL that is seeking an Executive Reporting & Visualization Analyst. Responsibilities:
+
+ Design and refine PowerPoint templates for executive scorecards and reporting
+ Collaborate with cybersecurity leads to translate complex data into visual narratives
+ Support the creation of dashboards and visual artifacts using Power BI or Tableau
+ Ensure consistency in branding, formatting, and messaging across all materials
+ Assist in documentation and preparation of knowledge transfer materials
+
+Requirements
+
+ To be considered for this position, candidates must have experience in a similar role, or they must possess significant knowledge, experience, and abilities to successfully perform the responsibilities listed
+ Relevant education and/or training will be considered a plus
+
+The pay range is the lowest to highest compensation we reasonably in good faith believe we would pay at posting for this role. We may ultimately pay more or less than this range. Employee pay is based on factors like relevant education, qualifications, certifications, experience, skills, seniority, location, performance, union contract and business needs. This range may be modified in the future.
+
+We offer comprehensive benefits including medical/dental/vision insurance, HSA, FSA, 401(k), and life, disability & ADD insurance to eligible employees. Salaried personnel receive paid time off. Hourly employees are not eligible for paid time off unless required by law. Hourly employees on a Service Contract Act project are eligible for paid sick leave.
+
+Note: Pay is not considered compensation until it is earned, vested and determinable. The amount and availability of any compensation remains in Kforce's sole discretion unless and until paid and may be modified in its discretion consistent with the law.
+
+This job is not eligible for bonuses, incentives or commissions.
+
+Kforce is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, pregnancy, sexual orientation, gender identity, national origin, age, protected veteran status, or disability status.
+
+By clicking “Apply Today” you agree to receive calls, AI-generated calls, text messages or emails from Kforce and its affiliates, and service providers. Note that if you choose to communicate with Kforce via text messaging the frequency may vary, and message and data rates may apply. Carriers are not liable for delayed or undelivered messages. You will always have the right to cease communicating via text by using key words such as STOP.
+---
+Robert Half logo
+Robert Half
+Share
+Show more options
+Business Analyst 
+Portage, MI · 1 day ago · 73 applicants
+Promoted by hirer · No response insights available yet
 
 
- High school diploma or equivalent (college degree a plus)
- Basic computer and communication skills
- Strong organizational and time management abilities
- Ability to work independently or as part of a team
- Adaptable and willing to learn new tools or systems
- Reliable and responsible work ethic
+$35/hr - $40/hr
+
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Temporary
+Matches your job preferences, job type is Temporary.
+
+Easy Apply
+
+Save
+Save Business Analyst  at Robert Half
+Business Analyst
+Robert Half · Portage, MI (Remote)
+
+Easy Apply
+
+Save
+Save Business Analyst  at Robert Half
+Show more options
+Your profile matches several required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me standout
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
 
 
 
-
-Benefits:
-
-
- Competitive salary with opportunities for increases
- Flexible work hours and remote options (if applicable)
- Opportunities for career growth and advancement
- Ongoing training and development
- Health, dental, and vision insurance (if applicable)
- Paid time off and holiday benefits
- Employee support programs and recognition
+About the job
+We are looking for an experienced business analyst to join our remote team based in Portage, Michigan. In this long-term contract role, you will lead the development and support of enterprise-wide business intelligence systems, enabling data-driven decision-making across the organization. This position requires a proactive individual with strong problem-solving skills and the ability to work independently while collaborating with key stakeholders.
 
 
+Responsibilities:
+• Design and maintain enterprise-wide business intelligence applications and architecture to support organizational goals.
+• Partner with senior management in both IT and business units to identify, prioritize, and fulfill data and information needs.
+• Resolve complex technical challenges and optimize business intelligence tools for enhanced performance.
+• Develop testing methodologies and criteria to ensure the reliability and effectiveness of business intelligence solutions.
+• Provide training and coaching to users, empowering them to utilize business intelligence tools for improved decision-making.
+• Establish and implement standards, policies, and procedures for business intelligence systems and tools.
+• Monitor and improve data quality by developing metrics and frameworks that ensure accuracy and consistency.
+• Conduct research on emerging technologies and create business cases for innovative enterprise-wide solutions.
+• Collaborate effectively across teams to align business intelligence solutions with organizational objectives.
+
+• Bachelor’s degree or equivalent experience in a related field.
+• Minimum of 2 years of experience in business intelligence or related roles.
+• Strong knowledge of SQL and Azure Data Factory.
+• Proficient in designing and implementing enterprise business intelligence solutions.
+• Demonstrated ability to solve complex technical problems independently.
+• Experience in developing policies, procedures, and quality metrics for business intelligence systems.
+• Excellent communication and customer service skills, with the ability to train and support users.
+• Analytical mindset with a focus on data accuracy and decision-making capabilities.
+Technology Doesn't Change the World, People Do.®
+
+Robert Half is the world’s first and largest specialized talent solutions firm that connects highly qualified job seekers to opportunities at great companies. We offer contract, temporary and permanent placement solutions for finance and accounting, technology, marketing and creative, legal, and administrative and customer support roles.
+
+Robert Half works to put you in the best position to succeed. We provide access to top jobs, competitive compensation and benefits, and free online training. Stay on top of every opportunity - whenever you choose - even on the go. Download the Robert Half app and get 1-tap apply, notifications of AI-matched jobs, and much more.
+
+All applicants applying for U.S. job openings must be legally authorized to work in the United States. Benefits are available to contract/temporary professionals, including medical, vision, dental, and life and disability insurance. Hired contract/temporary professionals are also eligible to enroll in our company 401(k) plan. Visit roberthalf.gobenefits.net for more information.
+---
+Numeratus.us logo
+Numeratus.us
+Share
+Show more options
+Remote- Blockchain Analyst
+United States · 3 hours ago · 23 applicants
+No response insights available yet
 
 
-Take the next step in your career and apply today. We are excited to learn more about you!
+ Remote
+Matches your job preferences, workplace type is Remote.
+
+ Full-time
+Matches your job preferences, job type is Full-time.
+
+Easy Apply
+
+Save
+Save Remote- Blockchain Analyst at Numeratus.us
+Remote- Blockchain Analyst
+Numeratus.us · United States (Remote)
+
+Easy Apply
+
+Save
+Save Remote- Blockchain Analyst at Numeratus.us
+Show more options
+Your profile matches some required qualifications
+
+
+Show match details
+
+Tailor my resume
+
+Help me update my profile
+
+Create cover letter
+
+
+BETA
+
+Is this information helpful?
+
+
+
+About the job
+Company Description
+ 
+Numeratus.us provides comprehensive accounting services to small and mid-sized companies looking to grow in the digital age. Our technology-driven approach streamlines processes and allows us to efficiently manage the back office for our clients. Our range of services includes E-B5/E-2 Accounting, Risk Management, Cryptocurrency Accounting, Content Creation & Digital Service Accounting, Sales Tax, Privacy & General Accounting. Join us and experience the difference!
+
+ Role Description
+ 
+This is a full-time remote role for a Blockchain Analyst. The Blockchain Analyst will be responsible for conducting detailed blockchain analysis, integrating and interpreting cryptocurrency data, and supporting finance-related tasks associated with digital assets. The role requires thorough analytical skills and familiarity with the blockchain ecosystem to ensure accurate reporting and insightful analysis.
+
+ Qualifications
+ 
+Blockchain Analysis and Blockchain skills
+Cryptocurrency knowledge
+Strong Analytical Skills
+Finance knowledge and experience
+Excellent written and verbal communication skills
+Ability to work independently and remotely
+Experience in the accounting industry is a plus
+Bachelor's degree in Finance, Accounting, or related field
 ---
