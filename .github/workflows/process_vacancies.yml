@@ -5,6 +5,9 @@ on:
     paths:
       - 'vacantes_yaml_manual/*.yaml'
 
+permissions:
+  contents: write
+
 jobs:
   process_vacancies:
     runs-on: ubuntu-latest
