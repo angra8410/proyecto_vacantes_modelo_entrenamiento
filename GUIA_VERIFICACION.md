@@ -84,6 +84,7 @@ Ejecuta el script de validación incluido:
 
 ```bash
 cd /ruta/al/repositorio
+chmod +x test_workflow.sh  # Dar permisos de ejecución si es necesario
 ./test_workflow.sh
 ```
 
@@ -100,11 +101,12 @@ cd /ruta/al/repositorio
 #### Paso 2: Crear Vacante de Prueba
 
 ```bash
-# Crear archivo de prueba
-cat > vacantes_yaml_manual/test_workflow_2025-10-27.yaml << EOF
+# Crear archivo de prueba (usa la fecha actual)
+FECHA=$(date +%Y-%m-%d)
+cat > vacantes_yaml_manual/test_workflow_${FECHA}.yaml << EOF
 cargo: Test Workflow Position
 empresa: Test Company
-fecha: 2025-10-27
+fecha: ${FECHA}
 descripcion: |
   This is a test vacancy to verify the workflow is working correctly.
 requerimientos: |
@@ -116,8 +118,9 @@ EOF
 #### Paso 3: Commit y Push
 
 ```bash
-git add vacantes_yaml_manual/test_workflow_2025-10-27.yaml
-git commit -m "Test: Verify workflow functionality"
+# Usar la misma variable de fecha
+git add vacantes_yaml_manual/test_workflow_${FECHA}.yaml
+git commit -m "Test: Verify workflow functionality ${FECHA}"
 git push origin main
 ```
 
@@ -132,7 +135,7 @@ git push origin main
 
 1. Ve al repositorio: `aplicaciones_laborales`
 2. Navega a: `to_process/`
-3. Deberías ver: `test_workflow_2025-10-27.yaml`
+3. Deberías ver: `test_workflow_${FECHA}.yaml` (con la fecha del día)
 
 ✅ **Si ves el archivo, el workflow está funcionando perfectamente!**
 
@@ -230,13 +233,14 @@ Una vez verificado que todo funciona:
 ### Para Añadir Nueva Vacante
 
 ```bash
-# 1. Crear archivo YAML en vacantes_yaml_manual/
-vim vacantes_yaml_manual/mi_vacante_2025-10-27.yaml
+# 1. Crear archivo YAML en vacantes_yaml_manual/ (usando fecha actual)
+FECHA=$(date +%Y-%m-%d)
+vim vacantes_yaml_manual/mi_vacante_${FECHA}.yaml
 
 # 2. Añadir contenido (formato ejemplo):
 cargo: Senior Data Analyst
 empresa: TechCorp
-fecha: 2025-10-27
+fecha: ${FECHA}
 descripcion: |
   Descripción del puesto...
 requerimientos: |
@@ -244,7 +248,7 @@ requerimientos: |
   - Requisito 2
 
 # 3. Guardar y commitear
-git add vacantes_yaml_manual/mi_vacante_2025-10-27.yaml
+git add vacantes_yaml_manual/mi_vacante_${FECHA}.yaml
 git commit -m "Add vacancy: Senior Data Analyst at TechCorp"
 git push
 
