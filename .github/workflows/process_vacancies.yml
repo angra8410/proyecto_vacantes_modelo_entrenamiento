@@ -1,0 +1,50 @@
+name: Process Vacancies and Organize CVs
+
+on:
+  push:
+    paths:
+      - 'vacantes_yaml_manual/*.yaml'
+
+jobs:
+  process_vacancies:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Copy new/modified YAMLs to to_process
+        run: |
+          python scripts/copy_to_process.py
+      
+      - name: Process vacancies and organize CVs
+        run: |
+          python scripts/process_and_organize_cv.py
+      
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          
+          # Add processed files and applications
+          git add to_process/ aplicaciones/
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Automated: Process vacancies and organize CVs [skip ci]"
+            git push
+          fi
