@@ -282,7 +282,7 @@ $ find aplicaciones/ -name "*.yaml" | wc -l
 1. ✅ Probar flujo con vacantes reales
 2. ✅ Validar organización por fecha
 3. ⏳ Migrar datos de repo antiguo (si aplica)
-4. ⏳ Archivar repo externo
+4. ⏳ Marcar repo externo como deprecated/archivado
 
 ### Mediano Plazo
 1. Extender generación de CVs (PDF, Word)

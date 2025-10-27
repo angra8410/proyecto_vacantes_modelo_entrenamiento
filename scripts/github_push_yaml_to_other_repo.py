@@ -18,6 +18,7 @@ Anteriormente, este script copiaba archivos YAML a un repositorio externo
 localmente en este repositorio.
 """
 import os
+import sys
 from github import Github
 import subprocess
 
@@ -26,7 +27,7 @@ print("Por favor usa el nuevo flujo centralizado:")
 print("  - scripts/copy_to_process.py")
 print("  - scripts/process_and_organize_cv.py")
 print("  - .github/workflows/process_vacancies.yml")
-exit(0)
+sys.exit(0)
 
 # Código antiguo conservado para referencia
 # ------------------------------------------
