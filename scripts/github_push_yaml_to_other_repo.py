@@ -1,36 +1,6 @@
-#!/usr/bin/env python3
-"""
-scripts/github_push_yaml_to_other_repo.py
-
-⚠️  DEPRECATED ⚠️
-
-Este script ya no es necesario. El nuevo flujo centralizado maneja todo
-en un solo repositorio sin necesidad de copiar a repos externos.
-
-Ver:
-- .github/workflows/process_vacancies.yml (nuevo workflow)
-- scripts/copy_to_process.py (copia local)
-- scripts/process_and_organize_cv.py (procesa y organiza)
-
-Historial:
-Anteriormente, este script copiaba archivos YAML a un repositorio externo
-(aplicaciones_laborales) usando la API de GitHub. Ahora todo se maneja
-localmente en este repositorio.
-"""
 import os
-import sys
 from github import Github
 import subprocess
-
-print("⚠️  Este script está DEPRECATED.")
-print("Por favor usa el nuevo flujo centralizado:")
-print("  - scripts/copy_to_process.py")
-print("  - scripts/process_and_organize_cv.py")
-print("  - .github/workflows/process_vacancies.yml")
-sys.exit(0)
-
-# Código antiguo conservado para referencia
-# ------------------------------------------
 
 SRC_DIR = "vacantes_yaml_manual"
 DEST_REPO = "angra8410/aplicaciones_laborales"
