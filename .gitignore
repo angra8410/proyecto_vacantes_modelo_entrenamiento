@@ -63,3 +63,12 @@ Thumbs.db
 *.dat
 *.tar.gz
 *.zip
+
+# Keep directory structure but ignore processed files
+to_process/*
+!to_process/.gitkeep
+
+# Keep aplicaciones structure but can be selective
+# Uncomment if you don't want to version CVs
+# aplicaciones/*
+# !aplicaciones/.gitkeep

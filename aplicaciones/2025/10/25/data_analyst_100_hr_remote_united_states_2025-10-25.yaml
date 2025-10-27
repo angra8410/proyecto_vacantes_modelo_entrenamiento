@@ -1,0 +1,21 @@
+cargo: "Data Analyst"
+empresa: "Crossing Hurdles"
+fecha: "2025-10-25"
+modalidad: "remoto"
+descripcion: |
+  
+  At Crossing Hurdles, we work as a referral partner. We refer candidates to our partner that collaborates with world’s leading AI research labs to build and train cutting-edge AI models.
+ 
+requerimientos:
+  - Strong experience in data analytics, data science, or a related quantitative field
+  - Proficiency in SQL and Python, with preferred experience in DuckDB or pandas
+  - Strong skills in data exploration, statistical reasoning, and business intelligence
+  - Experience using analytical tools like iPython, Jupyter Notebooks, and GitHub
+  - Excellent written communication skills with the ability to clearly explain complex reasoning
+  - Bachelor’s degree in Computer Science, Statistics, Mathematics, or a related discipline; advanced degree preferred
+  - Analyze large structured datasets provided by partner organizations to support AI model development
+  - Design reasoning-based analytics questions requiring multi-step problem-solving and data interpretation
+  - Write and validate Snowflake SQL queries, using tools such as DuckDB, pandas, or Python notebooks, to address analytical questions
+  - Produce clear, human-readable explanations articulating analytical reasoning and insights
+  - Format deliverables into structured JSON outputs that include question, query, and answer components
+  - Ensure output consistency and quality through collaboration with peers and feedback from reviewers

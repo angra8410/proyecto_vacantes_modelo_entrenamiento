@@ -1,27 +1,21 @@
-name: Copy new manual YAML to aplicaciones_laborales
+name: "[DEPRECATED] Copy new manual YAML to aplicaciones_laborales"
+
+# DEPRECATED: This workflow is no longer needed and will never be triggered
+# The centralized workflow in process_vacancies.yml handles everything in one repo
+# This file is kept for reference only
 
 on:
   push:
     paths:
-      - 'vacantes_yaml_manual/*.yaml'
+      - 'NEVER_TRIGGER_THIS_WORKFLOW/*.yaml'
 
 jobs:
   copy_yaml:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Copy changed YAMLs to aplicaciones_laborales
-        env:
-          GH_TOKEN: ${{ secrets.LABORALES_TOKEN }}
+      - name: Workflow deprecated
         run: |
-          pip install PyGithub
-          python scripts/github_push_yaml_to_other_repo.py
+          echo "⚠️  This workflow is deprecated and should never run."
+          echo "Please use the new centralized workflow: .github/workflows/process_vacancies.yml"
+          echo "All vacancy processing is now handled within this repository."
+          exit 0
