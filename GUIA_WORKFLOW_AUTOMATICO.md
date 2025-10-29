@@ -22,13 +22,15 @@ Este repositorio cuenta con un **flujo de trabajo completamente automatizado** q
 │  3. Se ejecuta process_vacantes.py                              │
 │     - Valida campos requeridos                                  │
 │     - Genera archivos YAML individuales                         │
-│     - Guarda en vacantes_yaml_manual/                           │
+│     - Guarda en DOS carpetas:                                   │
+│       • vacantes_yaml/ (copia original)                         │
+│       • vacantes_yaml_manual/ (copia editable)                  │
 └─────────────────┬───────────────────────────────────────────────┘
                   │
                   ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │  4. GitHub Actions hace commit y push automático                │
-│     - Commit: "Auto-generated YAML files from vacantes.txt"     │
+│     - Commit: "Auto-generated YAML files..."                    │
 │     - Push a la rama actual                                     │
 └─────────────────┬───────────────────────────────────────────────┘
                   │
@@ -40,7 +42,8 @@ Este repositorio cuenta con un **flujo de trabajo completamente automatizado** q
                   │
                   ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│  6. Los YAML se copian a aplicaciones_laborales/to_process/     │
+│  6. Los YAML de vacantes_yaml_manual/ se copian a               │
+│     aplicaciones_laborales/to_process/                          │
 │     (usando LABORALES_TOKEN)                                    │
 └─────────────────┬───────────────────────────────────────────────┘
                   │
@@ -49,6 +52,41 @@ Este repositorio cuenta con un **flujo de trabajo completamente automatizado** q
 │  7. ¡Vacantes listas para procesamiento posterior!              │
 └─────────────────────────────────────────────────────────────────┘
 ```
+
+## 📁 Estructura de Carpetas
+
+### `vacantes_yaml/` - Copia Original (Respaldo)
+- ✅ Generada automáticamente desde vacantes.txt
+- ✅ Se sobrescribe cada vez que se procesa vacantes.txt
+- ❌ **NO editar manualmente** (los cambios se perderán)
+- 📋 Sirve como respaldo/referencia de la versión original
+- 🔒 Solo lectura para el usuario
+
+### `vacantes_yaml_manual/` - Copia Editable
+- ✅ Generada automáticamente desde vacantes.txt
+- ✅ **Puedes editar estos archivos manualmente**
+- ✅ Esta es la carpeta que se copia a `aplicaciones_laborales`
+- ⚠️ Los cambios manuales se sobrescriben al regenerar desde vacantes.txt
+- 💡 Si editas manualmente, no regeneres hasta que termines
+
+### ¿Cuál usar?
+
+**Caso 1: Vacante correcta desde el inicio**
+- El YAML se genera automáticamente en ambas carpetas
+- Usa directamente el de `vacantes_yaml_manual/`
+- No necesitas editarlo
+
+**Caso 2: Necesitas ajustar la vacante**
+- El YAML se genera automáticamente en ambas carpetas
+- Edita el archivo en `vacantes_yaml_manual/`
+- Haz tus ajustes (corregir descripción, agregar campos, etc.)
+- El archivo editado se copiará a `aplicaciones_laborales`
+- `vacantes_yaml/` mantiene la versión original por si la necesitas
+
+**Caso 3: Regenerar desde vacantes.txt**
+- Al actualizar `vacantes.txt` y hacer push
+- AMBAS carpetas se regeneran (sobrescribiendo cambios manuales)
+- Usa esto solo cuando quieras resetear todo
 
 ## 📝 Formato del Archivo de Entrada
 

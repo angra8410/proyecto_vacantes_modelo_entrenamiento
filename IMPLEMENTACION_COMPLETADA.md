@@ -28,16 +28,32 @@
          ↓
 3. process_vacantes.yml se ejecuta
          ↓
-4. Se generan archivos YAML individuales
+4. Se generan archivos YAML individuales en DOS carpetas:
+   - vacantes_yaml/ (copia original, sin tocar)
+   - vacantes_yaml_manual/ (copia para editar manualmente)
          ↓
-5. Se hace commit automático a vacantes_yaml_manual/
+5. Se hace commit automático de ambas carpetas
          ↓
-6. copy_to_app_laborales.yml detecta nuevos YAMLs
+6. copy_to_app_laborales.yml detecta nuevos YAMLs en vacantes_yaml_manual/
          ↓
-7. YAMLs se copian a aplicaciones_laborales/to_process/
+7. YAMLs de vacantes_yaml_manual/ se copian a aplicaciones_laborales/to_process/
          ↓
 8. ✅ Proceso completo sin intervención manual
 ```
+
+### 📁 Diferencia entre las Carpetas
+
+- **`vacantes_yaml/`** 
+  - Copia original automática
+  - Se sobrescribe cada vez que se procesa vacantes.txt
+  - **NO editar** estos archivos manualmente (se perderán los cambios)
+  - Sirve como respaldo/referencia de la versión original
+
+- **`vacantes_yaml_manual/`**
+  - Copia editable
+  - Puedes modificar estos archivos manualmente
+  - Los cambios manuales se mantienen hasta el próximo procesamiento
+  - Esta es la carpeta que se copia a `aplicaciones_laborales`
 
 ---
 

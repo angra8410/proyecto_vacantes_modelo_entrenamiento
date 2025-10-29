@@ -31,23 +31,29 @@ jobs:
         run: |
           # Process vacantes.txt if it exists and has content
           if [ -f "vacantes.txt" ] && [ -s "vacantes.txt" ]; then
+            # Generate YAMLs in vacantes_yaml/ (original copy)
+            python scripts/process_vacantes.py --input vacantes.txt --output vacantes_yaml --quiet || true
+            # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
             python scripts/process_vacantes.py --input vacantes.txt --output vacantes_yaml_manual --quiet || true
           fi
           # Process vacantes_sample.txt if it exists and has content
           if [ -f "vacantes_sample.txt" ] && [ -s "vacantes_sample.txt" ]; then
+            # Generate YAMLs in vacantes_yaml/ (original copy)
+            python scripts/process_vacantes.py --input vacantes_sample.txt --output vacantes_yaml --quiet || true
+            # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
             python scripts/process_vacantes.py --input vacantes_sample.txt --output vacantes_yaml_manual --quiet || true
           fi
 
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code vacantes_yaml_manual/ || echo "changes=true" >> $GITHUB_OUTPUT
+          git diff --exit-code vacantes_yaml/ vacantes_yaml_manual/ || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push generated YAML files
         if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git add vacantes_yaml_manual/*.yaml
-          git commit -m "Auto-generated YAML files from vacantes.txt"
+          git add vacantes_yaml/*.yaml vacantes_yaml_manual/*.yaml
+          git commit -m "Auto-generated YAML files from vacantes.txt (original + editable copies)"
           git push

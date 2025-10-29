@@ -9,8 +9,15 @@ Repositorio con scripts para procesar vacantes, generar dataset por línea y ent
 
 1. **Sube tu archivo de vacantes** (`vacantes.txt` o `vacantes_sample.txt`) al repositorio
 2. **GitHub Actions detecta el cambio** automáticamente
-3. **Se generan archivos YAML** individuales en `vacantes_yaml_manual/`
-4. **Los archivos se copian** automáticamente a `aplicaciones_laborales` para procesamiento
+3. **Se generan archivos YAML** individuales en **DOS carpetas**:
+   - `vacantes_yaml/` - Copia original (respaldo, no tocar)
+   - `vacantes_yaml_manual/` - Copia editable (puedes ajustar manualmente)
+4. **Los archivos se copian** automáticamente a `aplicaciones_laborales` desde `vacantes_yaml_manual/`
+
+### 📁 Diferencia entre carpetas
+
+- **`vacantes_yaml/`**: Respaldo automático, NO editar (se sobrescribe al regenerar)
+- **`vacantes_yaml_manual/`**: Copia para ajustes manuales, esta se envía a `aplicaciones_laborales`
 
 **Formato esperado del archivo de entrada:**
 ```yaml
@@ -43,7 +50,8 @@ Estructura:
 - models/         # modelos guardados (no versionar)
 - output/         # archivos generados (no versionar)
 - venv/           # entorno virtual (no versionar)
-- vacantes_yaml_manual/  # YAMLs generados automáticamente
+- vacantes_yaml/  # YAMLs generados automáticamente (copia original, respaldo)
+- vacantes_yaml_manual/  # YAMLs generados automáticamente (copia editable)
 
 Instrucciones rápidas:
 1. Crear y activar venv:
