@@ -52,9 +52,9 @@ jobs:
             else
               echo "Detected plain text format, using extract_vacantes_from_text.py"
               # Generate YAMLs in vacantes_yaml/ (original copy)
-              python scripts/extract_vacantes_from_text.py --input vacantes.txt --output vacantes_yaml || true
+              python scripts/extract_vacantes_from_text.py --input vacantes.txt --output vacantes_yaml --quiet || true
               # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
-              python scripts/extract_vacantes_from_text.py --input vacantes.txt --output vacantes_yaml_manual || true
+              python scripts/extract_vacantes_from_text.py --input vacantes.txt --output vacantes_yaml_manual --quiet || true
             fi
           fi
           
@@ -71,9 +71,9 @@ jobs:
             else
               echo "Detected plain text format, using extract_vacantes_from_text.py"
               # Generate YAMLs in vacantes_yaml/ (original copy)
-              python scripts/extract_vacantes_from_text.py --input vacantes_sample.txt --output vacantes_yaml || true
+              python scripts/extract_vacantes_from_text.py --input vacantes_sample.txt --output vacantes_yaml --quiet || true
               # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
-              python scripts/extract_vacantes_from_text.py --input vacantes_sample.txt --output vacantes_yaml_manual || true
+              python scripts/extract_vacantes_from_text.py --input vacantes_sample.txt --output vacantes_yaml_manual --quiet || true
             fi
           fi
 
