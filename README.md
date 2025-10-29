@@ -3,12 +3,45 @@
 
 Repositorio con scripts para procesar vacantes, generar dataset por línea y entrenar clasificadores (role/company/other).
 
+## ⚡ Flujo Automático de Vacantes (NUEVO)
+
+**Ahora el procesamiento de vacantes es completamente automático:**
+
+1. **Sube tu archivo de vacantes** (`vacantes.txt` o `vacantes_sample.txt`) al repositorio
+2. **GitHub Actions detecta el cambio** automáticamente
+3. **Se generan archivos YAML** individuales en `vacantes_yaml_manual/`
+4. **Los archivos se copian** automáticamente a `aplicaciones_laborales` para procesamiento
+
+**Formato esperado del archivo de entrada:**
+```yaml
+cargo: Senior Developer
+empresa: Tech Corp
+fecha: 2025-01-15
+descripcion: |
+  Descripción del puesto...
+requerimientos: |
+  - Requisito 1
+  - Requisito 2
+---
+cargo: Data Analyst
+empresa: Analytics Inc
+fecha: 2025-01-20
+descripcion: |
+  Otra descripción...
+requerimientos: |
+  - SQL avanzado
+  - Python
+```
+
+**¡Eso es todo!** No necesitas ejecutar scripts manualmente. El sistema procesa y distribuye las vacantes automáticamente.
+
 Estructura:
 - scripts/        # scripts Python para conversión, etiquetado, entrenamiento y utilidades
 - data/           # datasets (no versionar datos sensibles)
 - models/         # modelos guardados (no versionar)
 - output/         # archivos generados (no versionar)
 - venv/           # entorno virtual (no versionar)
+- vacantes_yaml_manual/  # YAMLs generados automáticamente
 
 Instrucciones rápidas:
 1. Crear y activar venv:
@@ -18,12 +51,12 @@ Instrucciones rápidas:
 2. Instalar dependencias:
    pip install -r requirements.txt
 
-3. Procesar vacantes desde texto plano (NUEVO):
+3. Procesar vacantes desde texto plano (MANUAL):
    python scripts/extract_vacantes_from_text.py --input vacante.txt --output output/extracted
    python scripts/extract_vacantes_from_text.py --input vacante.txt --output output/extracted --run-dataset-conversion
    Ver GUIA_EXTRACTOR_TEXTO_PLANO.md para más detalles
 
-4. Procesar vacantes desde YAML estructurado:
+4. Procesar vacantes desde YAML estructurado (MANUAL):
    python scripts/process_vacantes.py --input vacantes.txt --output output/vacantes
    python scripts/process_vacantes.py --input vacantes.txt --output output/vacantes --to-jsonl
 
