@@ -35,6 +35,8 @@ requerimientos: |
 
 **¡Eso es todo!** No necesitas ejecutar scripts manualmente. El sistema procesa y distribuye las vacantes automáticamente.
 
+📖 **Ver guía completa:** [GUIA_WORKFLOW_AUTOMATICO.md](GUIA_WORKFLOW_AUTOMATICO.md)
+
 Estructura:
 - scripts/        # scripts Python para conversión, etiquetado, entrenamiento y utilidades
 - data/           # datasets (no versionar datos sensibles)
