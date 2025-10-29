@@ -29,19 +29,52 @@ jobs:
 
       - name: Process vacantes and generate YAML files
         run: |
+          # Function to detect if file is YAML-formatted or plain text
+          is_yaml_format() {
+            # Check if file contains YAML separators (---) and YAML field markers
+            if grep -q "^---$" "$1" && grep -q "^cargo:" "$1" && grep -q "^empresa:" "$1"; then
+              return 0  # Is YAML format
+            else
+              return 1  # Is plain text
+            fi
+          }
+          
           # Process vacantes.txt if it exists and has content
           if [ -f "vacantes.txt" ] && [ -s "vacantes.txt" ]; then
-            # Generate YAMLs in vacantes_yaml/ (original copy)
-            python scripts/process_vacantes.py --input vacantes.txt --output vacantes_yaml --quiet || true
-            # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
-            python scripts/process_vacantes.py --input vacantes.txt --output vacantes_yaml_manual --quiet || true
+            echo "Processing vacantes.txt..."
+            
+            if is_yaml_format "vacantes.txt"; then
+              echo "Detected YAML format, using process_vacantes.py"
+              # Generate YAMLs in vacantes_yaml/ (original copy)
+              python scripts/process_vacantes.py --input vacantes.txt --output vacantes_yaml --quiet || true
+              # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
+              python scripts/process_vacantes.py --input vacantes.txt --output vacantes_yaml_manual --quiet || true
+            else
+              echo "Detected plain text format, using extract_vacantes_from_text.py"
+              # Generate YAMLs in vacantes_yaml/ (original copy)
+              python scripts/extract_vacantes_from_text.py --input vacantes.txt --output vacantes_yaml --quiet || true
+              # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
+              python scripts/extract_vacantes_from_text.py --input vacantes.txt --output vacantes_yaml_manual --quiet || true
+            fi
           fi
+          
           # Process vacantes_sample.txt if it exists and has content
           if [ -f "vacantes_sample.txt" ] && [ -s "vacantes_sample.txt" ]; then
-            # Generate YAMLs in vacantes_yaml/ (original copy)
-            python scripts/process_vacantes.py --input vacantes_sample.txt --output vacantes_yaml --quiet || true
-            # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
-            python scripts/process_vacantes.py --input vacantes_sample.txt --output vacantes_yaml_manual --quiet || true
+            echo "Processing vacantes_sample.txt..."
+            
+            if is_yaml_format "vacantes_sample.txt"; then
+              echo "Detected YAML format, using process_vacantes.py"
+              # Generate YAMLs in vacantes_yaml/ (original copy)
+              python scripts/process_vacantes.py --input vacantes_sample.txt --output vacantes_yaml --quiet || true
+              # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
+              python scripts/process_vacantes.py --input vacantes_sample.txt --output vacantes_yaml_manual --quiet || true
+            else
+              echo "Detected plain text format, using extract_vacantes_from_text.py"
+              # Generate YAMLs in vacantes_yaml/ (original copy)
+              python scripts/extract_vacantes_from_text.py --input vacantes_sample.txt --output vacantes_yaml --quiet || true
+              # Generate YAMLs in vacantes_yaml_manual/ (editable copy)
+              python scripts/extract_vacantes_from_text.py --input vacantes_sample.txt --output vacantes_yaml_manual --quiet || true
+            fi
           fi
 
       - name: Check for changes

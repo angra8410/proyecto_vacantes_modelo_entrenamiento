@@ -9,17 +9,31 @@ Repositorio con scripts para procesar vacantes, generar dataset por línea y ent
 
 1. **Sube tu archivo de vacantes** (`vacantes.txt` o `vacantes_sample.txt`) al repositorio
 2. **GitHub Actions detecta el cambio** automáticamente
-3. **Se generan archivos YAML** individuales en **DOS carpetas**:
+3. **El sistema detecta el formato** (texto plano o YAML estructurado)
+4. **Se generan archivos YAML** individuales en **DOS carpetas**:
    - `vacantes_yaml/` - Copia original (respaldo, no tocar)
    - `vacantes_yaml_manual/` - Copia editable (puedes ajustar manualmente)
-4. **Los archivos se copian** automáticamente a `aplicaciones_laborales` desde `vacantes_yaml_manual/`
+5. **Los archivos se copian** automáticamente a `aplicaciones_laborales` desde `vacantes_yaml_manual/`
 
-### 📁 Diferencia entre carpetas
+### 📝 Formatos Soportados
 
-- **`vacantes_yaml/`**: Respaldo automático, NO editar (se sobrescribe al regenerar)
-- **`vacantes_yaml_manual/`**: Copia para ajustes manuales, esta se envía a `aplicaciones_laborales`
+#### Opción 1: Texto Plano (Recomendado para copiar de LinkedIn, emails, etc.)
+Simplemente copia y pega el texto de la vacante:
+```text
+Digital Analytics Engineer
+Insight Global
+Colombia · Remote
 
-**Formato esperado del archivo de entrada:**
+Required Skills:
+- 3 years of experience...
+- Python, SQL...
+
+Job Description:
+We are looking for...
+```
+
+#### Opción 2: YAML Estructurado
+Para mayor control, usa formato YAML:
 ```yaml
 cargo: Senior Developer
 empresa: Tech Corp
@@ -42,7 +56,16 @@ requerimientos: |
 
 **¡Eso es todo!** No necesitas ejecutar scripts manualmente. El sistema procesa y distribuye las vacantes automáticamente.
 
-📖 **Ver guía completa:** [GUIA_WORKFLOW_AUTOMATICO.md](GUIA_WORKFLOW_AUTOMATICO.md)
+📖 **Ver guías completas:** 
+- [SOLUCION_YAML_GENERATION.md](SOLUCION_YAML_GENERATION.md) - Solución completa del problema de generación
+- [GUIA_WORKFLOW_AUTOMATICO.md](GUIA_WORKFLOW_AUTOMATICO.md) - Guía del workflow automático
+
+### 🧪 Validación
+
+Ejecuta las pruebas automáticas para verificar que todo funciona:
+```bash
+./tests/test_yaml_generation.sh
+```
 
 Estructura:
 - scripts/        # scripts Python para conversión, etiquetado, entrenamiento y utilidades
