@@ -8,6 +8,8 @@ on:
 jobs:
   copy_yaml:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read  # Only need read permission for this workflow
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4

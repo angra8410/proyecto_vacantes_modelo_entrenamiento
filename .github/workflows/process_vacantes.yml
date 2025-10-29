@@ -9,6 +9,8 @@ on:
 jobs:
   process_vacantes:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Need write permission to commit and push generated files
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
