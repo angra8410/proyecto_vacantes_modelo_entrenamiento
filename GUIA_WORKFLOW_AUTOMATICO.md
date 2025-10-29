@@ -92,8 +92,8 @@ tipo_contrato: Full-time
 | `cargo` | Título del puesto | ✅ Sí |
 | `empresa` | Nombre de la empresa | ✅ Sí |
 | `fecha` | Fecha en formato YYYY-MM-DD | ✅ Sí |
-| `descripcion` | Descripción del puesto (usar `\|` para multilínea) | ✅ Sí |
-| `requerimientos` | Lista de requisitos (usar `\|` para multilínea) | ✅ Sí |
+| `descripcion` | Descripción del puesto (usar `|` para multilínea) | ✅ Sí |
+| `requerimientos` | Lista de requisitos (usar `|` para multilínea) | ✅ Sí |
 | `ubicacion` | Ubicación del trabajo | ❌ Opcional |
 | `tipo_contrato` | Tipo de contrato (Full-time, Contract, etc.) | ❌ Opcional |
 
@@ -199,8 +199,8 @@ git status
 1. Revisa los logs en GitHub Actions
 2. Verifica el formato YAML:
    ```bash
-   # Validar YAML localmente
-   python -c "import yaml; yaml.safe_load(open('vacantes.txt'))"
+   # Validar YAML con múltiples documentos localmente
+   python -c "import yaml; list(yaml.safe_load_all(open('vacantes.txt')))"
    ```
 3. Asegúrate que todos los campos requeridos estén presentes
 
