@@ -1,0 +1,22 @@
+cargo: "Power BI Developer"
+empresa: "8base"
+fecha: "2025-11-09"
+modalidad: "remoto"
+descripcion: |
+ 
+  Were looking for a Power BI Developer Who will be responsable Design and develop executive-level dashboards and operational reports for retail and grocery analytics using Power BI.
+  
+  
+requerimientos:
+  - Create Power BI dashboards for sales performance, inventory aging, and promotion ROI.
+  - Optimize DAX measures, Power Query dataflows, and refresh schedules via Power BI Service.
+  - Implement row-level security (RLS) and governance across workspaces.
+  - Collaborate with Data Engineers to connect to Databricks and Synapse datasets.
+  - Ensure adoption by business users through training and visual standardization.
+  - 4+ years of experience 
+  - Power BI Service & Desktop, DAX, Power Query (M), Azure Synapse integration.
+  - Data Sources. Databricks SQL Warehouse, Azure Analysis Services, ADF outputs.
+  - Performance Tuning. aggregation tables, incremental refresh, DirectQuery optimization.
+  - Nice to have Retail Experience. sales dashboards, store comparison metrics, SKU profitability.
+  - English B2
+  - Only for people located in Latinamerica
