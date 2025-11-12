@@ -1,0 +1,71 @@
+======================================================================
+REPORTE DE EXTRACCIÓN DE VACANTES
+======================================================================
+
+Fecha: 2025-11-10 21:01:46
+
+RESUMEN
+----------------------------------------------------------------------
+Total procesadas: 6
+Exitosas: 6
+Fallidas: 0
+Calidad promedio: 100.0/100
+
+CAMPOS EXTRAÍDOS
+----------------------------------------------------------------------
+  ✓ cargo: 6
+  ✓ descripcion: 6
+  ✓ empresa: 6
+  ✓ fecha: 6
+  ✓ modalidad: 6
+  ✓ requerimientos: 6
+
+DETALLE POR VACANTE
+----------------------------------------------------------------------
+
+1. business_development_manager_its_database_solutions_2025-11-10.yaml
+   Calidad: 100/100
+   Cargo: Business Development Manager
+   Empresa: its database solutions
+   Modalidad: Remote
+
+2. schedule_and_coordinate_interv_terrenos_houston_share_show_2025-11-10.yaml
+   Calidad: 100/100
+   Cargo: Schedule and coordinate interviews with candidates and hiring managers
+   Empresa: Terrenos Houston
+Share
+Show
+   Modalidad: Remote
+
+3. yipitdata_seeks_a_proactive_an_recognized_multiple_times_as_o_2025-11-10.yaml
+   Calidad: 100/100
+   Cargo: YipitData seeks a proactive, analytically minded Sales Engineer with +2 years of experience to join our dynamic team. This role will directly influence the growth of our data feed revenue. As a Sales Engineer, you will provide our clients with operational and quantitative development support, enabling them to utilize and evaluate YipitData’s data feeds effectively.
+   Empresa: recognized multiple times as one of Inc
+   Modalidad: Remote
+
+4. business_intelligence_analyst_insight_global_2025-11-10.yaml
+   Calidad: 100/100
+   Cargo: Business Intelligence Analyst
+   Empresa: Insight Global
+   Modalidad: Remote
+
+5. senior_consultant_construction_held_llc_2025-11-10.yaml
+   Calidad: 100/100
+   Cargo: Senior Consultant | Construction Abvisory | Mechanical Engineer | Industrial Maintenance Specialist |
+   Empresa: Held LLC
+   Modalidad: Remote
+
+6. hirelatam_logo_hirelatam_2025-11-10.yaml
+   Calidad: 100/100
+   Cargo: HireLATAM logo
+   Empresa: HireLATAM
+   Modalidad: Remote Operations Assistant
+
+
+CONVERSIÓN A DATASET
+======================================================================
+Archivos generados: line_dataset.jsonl, line_dataset.csv, line_dataset_review.jsonl
+
+Uso del dataset:
+  python scripts/train_line_classifier.py data/line_dataset.jsonl
+  python scripts/train_tfidf_baseline.py data/line_dataset.jsonl
